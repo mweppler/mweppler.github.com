@@ -1,0 +1,36 @@
+---
+layout: post
+---
+<h1 class="entry-title">Rhino Javascript Engine</h1>
+<div class="entry-content">
+						<p>A friend of mine thinks he can beat my score on the gild.com triangle numbers challenge. His only excuse is getting rhino setup on his MacBook to test the JS. So here is a quick and dirty approach.</p>
+<ul>
+<li>Grab the Rhino source <a href="ftp://ftp.mozilla.org/pub/mozilla.org/js/rhino1_7R2.zip">here</a>.</li>
+<li>Un-zip/tar to a cool directory. I use: ‘/Users/username/Development/Tools/Rhino’</li>
+<li>Edit your .bash_profile file:<br>
+<code>export PATH=$PATH:/Users/username/Development/Tools/Rhino</code><br>
+<code>alias rhino='java -jar /Users/username/Development/Tools/Rhino/js.jar'</code></li>
+<li>Now grab his source from: <a href="https://gist.github.com/981382" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','gist.github.com']);">https://gist.github.com/981382</a></li>
+<li>Add a print statement.<br>
+<code>print(fibs(12));</code></li>
+<li>Run from the console using:<br>
+<code>rhino fibs.js</code></li>
+</ul>
+<p>Questions, Comment…</p>
+<p>UPDATE<br>
+I found an issue when trying to test a js file. Because ‘rhino’ is an alias bash will not run it as a command. I found a better solution here: <a href="http://workingrhino.blogspot.com/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','workingrhino.blogspot.com']);">WorkingRhino</a>. Check it out, or just follow my instructions below:</p>
+<ul>
+<li>Remove the rhino alias from .bash_profile or .profile.</li>
+<li>Create a shell script in ‘/Users/username/Development/Tools/Rhino’ named rhino</li>
+<li>Copy/Paste this:
+<pre>#! /bin/bash
+dir=$(dirname $0)
+export CLASSPATH=${CLASSPATH}${CLASSPATH:+:}${dir}/*
+echo using CLASSPATH=$(printenv CLASSPATH) &gt; /dev/stderr
+[ "$1" = "-f" ] || { RLWRAP="rlwrap -C js" ;}
+exec $RLWRAP java ${JAVAOPTS} \
+org.mozilla.javascript.tools.shell.Main -strict "$@"</pre>
+</li>
+<li>Make rhino executable with chmod u+x rhino</li>
+</ul>
+											</div>

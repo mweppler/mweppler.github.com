@@ -1,0 +1,22 @@
+---
+layout: post
+---
+<h1 class="entry-title">Drupal – HTTP Error 0 when uploading files</h1>
+<div class="entry-content">
+						<p>Ran into this issue today with a site I am developing. Read through a lot of posts, on a lot of different sites. Steps I’ve tried include:</p>
+<ol>
+<li>Fixed write permissions on /tmp and sites/default/files.</li>
+<li>Install and enable pecl upload progress.</li>
+<li>Disable/Re-Enable IMCE &amp; <label for="edit-status-imce-wysiwyg">IMCE Wysiwyg API bridge </label>module.</li>
+<li>memory_limit already set to 512M.</li>
+<li>Installed the <a href="http://drupal.org/project/jquery_update" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','drupal.org']);">jquery update</a> module</li>
+<li>Replaced jquery.form.js.</li>
+<li>Set the value of baseurl in settings.php</li>
+<li>Modified vhost file ServerName</li>
+<li>Last but not least…</li>
+</ol>
+<p>I downloaded filefield-6.x-3.0-alpha2 and replaced filefield-6.x-3.9. Ran into 2 undefined functions:</p>
+<p>theme_filefield_widget()</p>
+<p>field_file_urlencode_path()</p>
+<p>copy/pasted from them from the&nbsp;corresponding&nbsp;filefield-6.x-3.9 files. Everything is running fine so far. The real test is in the morning when the rest of the developers are working on the site.</p>
+											</div>

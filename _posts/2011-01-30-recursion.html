@@ -1,0 +1,32 @@
+---
+layout: post
+---
+<h1 class="entry-title">Recursion…</h1>
+<div class="entry-content">
+						<p>I am growing more and more interested in Algorithms, and with algorithms comes Recursion or so im finding. I found source for Factorial.java and broke it down visually. Hope this helps anyone working with recursion for the first time.</p>
+<p><code><br>
+public static long factorial(long N) {<br>
+   if (N == 1) return 1;<br>
+   return N * factorial(N-1);<br>
+}<br>
+</code></p>
+<p>So whats happening here:</p>
+<p>Lets say your main method looks something like this:</p>
+<p><code><br>
+public static void main(String[] args) {<br>
+   long factors = 5;<br>
+   factorial(factors);<br>
+}<br>
+</code></p>
+<p>5 is tested and is not equal to 1 so it moves to N * factorial(N-1)<br>
+- 4 is tested and is not equal to 1 so it moves to N * factorial(N-1)<br>
+– 3 is tested and is not equal to 1 so it moves to N * factorial(N-1)<br>
+— 2 is tested and is not equal to 1 so it moves to N * factorial(N-1)<br>
+—- 1 is tested and is equal to 1 so it returns 1<br>
+— (N==2) N * (factorial(N-1) returned 1) 1 = 2 and returns 2<br>
+– (N==3) N * (factorial(N-1) returned 2) 2 = 6 and returns 6<br>
+- (N==4) N * (factorial(N-1) returned 6) 6 = 24 and returns 24<br>
+(N==5) N * (factorial(N-1) returned 24) 24 = 120 and returns 120</p>
+<p>So 5*4*3*2*1 = 120</p>
+<p>Make sense? I hope. If not feel free to comment and ill try to clear it up.</p>
+											</div>
