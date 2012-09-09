@@ -1,0 +1,149 @@
+/* LayerSlider powerful Skin */
+
+
+
+.ls-powerful {
+	background: #fff;
+	padding: 10px;
+	-webkit-box-shadow: 0px 1px 5px 0px #4a4a4a;
+    -moz-box-shadow: 0px 1px 5px 0px #4a4a4a;
+    box-shadow: 0px 1px 5px 0px #4a4a4a;
+}
+
+.ls-powerful .ls-bottom-nav-wrapper {
+	text-align: center;
+	margin: 20px auto 0px auto;
+	position: relative;
+}
+
+.ls-powerful .ls-playvideo {
+	width: 75px;
+	height: 75px;
+	margin-left: -37px;
+	margin-top: -37px;
+}
+
+.ls-powerful .ls-playvideo,
+.ls-powerful .ls-nav-sides,
+.ls-powerful .ls-bottom-slidebuttons a,
+.ls-powerful .ls-nav-prev,
+.ls-powerful .ls-nav-next,
+.ls-powerful .ls-nav-start,
+.ls-powerful .ls-nav-stop {
+	background-image: url(skin.png);	
+}
+
+.ls-powerful .ls-playvideo {
+	background-position: -300px -150px;
+}
+
+.ls-powerful .ls-playvideo:hover,
+.ls-powerful .ls-vpcontainer:hover .ls-playvideo {
+	background-position: -375px -150px;
+}
+
+.ls-powerful .ls-nav-prev {
+	background-position: 0px 0px;
+}
+
+.ls-powerful .ls-nav-prev:hover {
+	background-position: 0px -75px;
+}
+
+.ls-powerful .ls-nav-next {
+	background-position: -150px 0px;
+}
+
+.ls-powerful .ls-nav-next:hover {
+	background-position: -150px -75px;
+}
+
+.ls-powerful .ls-nav-start {
+	background-position: -300px 0px;
+}
+
+.ls-powerful .ls-nav-start:hover {
+	background-position: -300px -75px;
+}
+
+.ls-powerful .ls-nav-stop {
+	background-position: -450px 0px;
+}
+
+.ls-powerful .ls-nav-stop:hover {
+	background-position: -450px -75px;
+}
+
+.ls-powerful .ls-bottom-slidebuttons a {
+	background-position: 0px -150px;
+}
+
+.ls-powerful .ls-bottom-slidebuttons a.ls-nav-active {
+	background-position: -75px -150px;
+}
+
+.ls-powerful .ls-nav-sideleft {
+	background-position: -150px -150px;	
+}
+
+.ls-powerful .ls-nav-sideright {
+	background-position: -225px -150px;	
+}
+
+
+
+.ls-powerful .ls-nav-prev,
+.ls-powerful .ls-nav-next {
+	display: none;
+	width: 30px;
+	height: 50px;
+	z-index: 10000;
+	top: 50%;
+	margin-top: -25px;	
+	position: absolute;
+}
+
+.ls-powerful:hover .ls-nav-prev, .ls-powerful:hover .ls-nav-next {
+	display: block;
+}
+
+.ls-powerful .ls-nav-prev {
+	left: 20px;	
+}
+
+.ls-powerful .ls-nav-next {
+	right: 20px;	
+}
+
+
+
+.ls-powerful .ls-bottom-slidebuttons,
+.ls-powerful .ls-bottom-slidebuttons a,
+.ls-powerful .ls-nav-start,
+.ls-powerful .ls-nav-stop,
+.ls-powerful .ls-nav-sides {
+	height: 30px;
+	margin: 0 5px;
+}
+
+.ls-powerful .ls-bottom-slidebuttons,
+.ls-powerful .ls-bottom-slidebuttons a,
+.ls-powerful .ls-nav-start,
+.ls-powerful .ls-nav-stop,
+.ls-powerful .ls-nav-sides {
+	display: inline-block;
+}
+
+.ls-powerful .ls-nav-start,
+.ls-powerful .ls-nav-stop {
+	width: 22px;
+	display: none;
+}
+
+.ls-powerful .ls-bottom-slidebuttons a {
+	width: 17px;
+}
+
+.ls-powerful .ls-nav-sides {
+	width: 4px;
+}
