@@ -3653,3 +3653,28 @@ header {
 .name {
   display: inline;
 }
+
+dt {
+  border-right: 4px solid #2481FF;
+  color: #666;
+  float: left;
+  font-style: italic;
+  font-size: 18px;
+  font-weight: bold;
+  height: 100px;
+  padding: 0 26px 0 0;
+  text-align: right;
+  width: 150px;
+}
+
+dd {
+  float: left;
+  width: 600px;
+}
+
+dd.clear {
+  float: none;
+  height: 15px;
+  margin: 0;
+}
+
