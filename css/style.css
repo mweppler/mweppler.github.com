@@ -3631,8 +3631,9 @@ a img.aligncenter {
   background: #ba55db;
 }
 
-/* =============================== */
 
+/* #Override Styles.
+================================================== */
 header {
   padding-bottom: 0;
 }
@@ -3678,3 +3679,6 @@ dd.clear {
   margin: 0;
 }
 
+.widget.icon ul {
+  margin-left: 45px;
+}
