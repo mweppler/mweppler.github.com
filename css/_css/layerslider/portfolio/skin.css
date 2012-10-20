@@ -1,0 +1,141 @@
+/* LayerSlider portfolio Skin */
+
+
+
+.ls-portfolio {
+	padding: 5px;
+	background: #f0f0f0;
+	border: 5px solid #fff;
+	box-shadow: inset 0 0 4px #ddd;
+}
+
+.ls-portfolio .ls-bottom-nav-wrapper {
+	text-align: center;
+	margin: 10px auto 0px auto;
+	position: relative;
+}
+
+.ls-portfolio .ls-playvideo {
+	width: 75px;
+	height: 75px;
+	margin-left: -37px;
+	margin-top: -37px;
+}
+
+.ls-portfolio .ls-playvideo,
+.ls-portfolio .ls-nav-sides,
+.ls-portfolio .ls-bottom-slidebuttons a,
+.ls-portfolio .ls-nav-prev,
+.ls-portfolio .ls-nav-next,
+.ls-portfolio .ls-nav-start,
+.ls-portfolio .ls-nav-stop {
+	background-image: url(skin.png);	
+}
+
+.ls-portfolio .ls-playvideo {
+	background-position: -300px -150px;
+}
+
+.ls-portfolio .ls-playvideo:hover,
+.ls-portfolio .ls-vpcontainer:hover .ls-playvideo {
+	background-position: -375px -150px;
+}
+
+.ls-portfolio .ls-nav-prev {
+	background-position: 0px 0px;
+}
+
+.ls-portfolio .ls-nav-prev:hover {
+	background-position: 0px -75px;
+}
+
+.ls-portfolio .ls-nav-next {
+	background-position: -150px 0px;
+}
+
+.ls-portfolio .ls-nav-next:hover {
+	background-position: -150px -75px;
+}
+
+.ls-portfolio .ls-nav-start {
+	background-position: -300px 0px;
+}
+
+.ls-portfolio .ls-nav-start:hover {
+	background-position: -300px -75px;
+}
+
+.ls-portfolio .ls-nav-stop {
+	background-position: -450px 0px;
+}
+
+.ls-portfolio .ls-nav-stop:hover {
+	background-position: -450px -75px;
+}
+
+.ls-portfolio .ls-bottom-slidebuttons a {
+	background-position: 0px -150px;
+}
+
+.ls-portfolio .ls-bottom-slidebuttons a.ls-nav-active {
+	background-position: -75px -150px;
+}
+
+.ls-portfolio .ls-nav-sideleft {
+	background-position: -150px -150px;	
+}
+
+.ls-portfolio .ls-nav-sideright {
+	background-position: -225px -150px;	
+}
+
+
+
+.ls-portfolio .ls-nav-prev,
+.ls-portfolio .ls-nav-next {
+	width: 25px;
+	height: 50px;
+	z-index: 10000;
+	top: 50%;
+	margin-top: -25px;	
+	position: absolute;
+}
+
+.ls-portfolio .ls-nav-prev {
+	left: 0px;	
+}
+
+.ls-portfolio .ls-nav-next {
+	right: 0px;	
+}
+
+
+
+.ls-portfolio .ls-bottom-slidebuttons,
+.ls-portfolio .ls-bottom-slidebuttons a,
+.ls-portfolio .ls-nav-start,
+.ls-portfolio .ls-nav-stop,
+.ls-portfolio .ls-nav-sides {
+	height: 30px;
+}
+
+.ls-portfolio .ls-bottom-slidebuttons,
+.ls-portfolio .ls-bottom-slidebuttons a,
+.ls-portfolio .ls-nav-start,
+.ls-portfolio .ls-nav-stop,
+.ls-portfolio .ls-nav-sides {
+	display: inline-block;
+}
+
+.ls-portfolio .ls-nav-start,
+.ls-portfolio .ls-nav-stop {
+	width: 22px;
+}
+
+.ls-portfolio .ls-bottom-slidebuttons a {
+	width: 17px;
+}
+
+.ls-portfolio .ls-nav-sides {
+	width: 4px;
+}
