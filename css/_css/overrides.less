@@ -21,22 +21,54 @@ header {
   display: inline;
 }
 
-dt {
-  border-right: 4px solid #2481FF;
-  color: #666;
-  float: left;
-  font-style: italic;
-  font-size: 18px;
-  font-weight: bold;
-  height: 100px;
-  padding: 0 26px 0 0;
-  text-align: right;
-  width: 150px;
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  dt {
+    border-bottom: 4px solid #2481FF;
+    color: #666;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  dd {
+    margin: 0;
+    padding: 0;
+  }
 }
 
-dd {
-  float: left;
-  width: 600px;
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  dt {
+    border-bottom: 4px solid #2481FF;
+    color: #666;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: bold;
+    width: 250px;
+  }
+
+  dd {
+    width: 600px;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  dt {
+    border-right: 4px solid #2481FF;
+    color: #666;
+    float: left;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: bold;
+    height: 100px;
+    padding: 0 26px 0 0;
+    text-align: right;
+    width: 150px;
+  }
+
+  dd {
+    float: left;
+    width: 600px;
+  }
 }
 
 dd.clear {
