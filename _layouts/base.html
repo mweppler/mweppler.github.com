@@ -44,9 +44,11 @@
       <div class="ten columns">
         <nav class="menu">
           <ul>
-            <!-- <li><a href="/accomplishments.html">Accomplishments</a></li> -->
-            <li><a href="/projects.html">Projects</a>
-            <li><a href="/resume.html">Resume</a></li>
+            {% for list_item in site.navigation %}
+              {% assign current = nil %}
+              {% if page.url == list_item.href %} {% assign current = 'current-menu-item' %} {% endif %}
+              <li class="{% unless current.nil? %} {{ current }} {% endunless %}"><a href="{{ list_item.href }}">{{ list_item.link }}</a></li>
+            {% endfor %}
           </ul>
         </nav><!-- /menu -->
       </div>

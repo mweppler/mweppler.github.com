@@ -1,4 +1,12 @@
-server: true
 auto: true
-pygments: true
 lsi: false
+pygments: true
+server: true
+
+navigation:
+- link: Home
+  href:  /index.html
+- link: Projects
+  href:  /projects.html
+- link: Resume
+  href:  /resume.html
