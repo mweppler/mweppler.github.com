@@ -1,5 +1,5 @@
 ---
-layout: base 
+layout: base
 ---
 <div class="eleven columns alpha content">
     <h1>Hello, world!</h1>
@@ -17,12 +17,10 @@ layout: base
         </div>
 
         <div class="eight columns omega text">
-          <!-- <h2><a href="{{ post.url }}">{{ post.title }}</a></h2> -->
-          <p>{{ post.content | truncatewords: 35 }}</p>
-
-          <p><a href="{{ post.url }}">Continue reading »</a></p>
+          <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+          <p>{{ post.preview | truncatewords: 35 }}</p>
         </div>
-      </article> 
+      </article>
     {% endfor %}
 </div><!--/span-->
 
