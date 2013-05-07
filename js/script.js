@@ -115,7 +115,7 @@
         return "over a year ago";
       }
     };
-    user = 'envato';
+    user = 'mattweppler';
     $.getJSON('http://api.twitter.com/1/statuses/user_timeline.json?screen_name=' + user + '&include_rts=true&include_entities=true&count=2&callback=?', function(data) {
       var tweet;
       tweet = data[0].text;
