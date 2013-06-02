@@ -3548,6 +3548,27 @@ a img.aligncenter {
   -o-transition-property: top, left, opacity;
   transition-property: transform, opacity;
 }
+#screenshots img {
+  float: left;
+  margin-bottom: 1em;
+  margin-right: 1.5%;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+#screenshots img.mobile {
+  width: 10.5%;
+}
+#screenshots img.tablet-portrait {
+  width: 19%;
+}
+#screenshots img.tablet-landscape {
+  width: 25%;
+}
+#screenshots img.desktop {
+  margin-right: 0;
+  width: 40.5%;
+}
 /* #Tablet (Portrait)
 ================================================== */
 /* #Media Queries

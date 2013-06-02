@@ -967,7 +967,7 @@ ul.arrow {
     .mobile-image {
       padding: 15px;
       display: none;
-    } 
+    }
 }
 
 
@@ -1361,6 +1361,34 @@ a img.aligncenter {
 
 
 
+#screenshots img {
+  float: left;
+  margin-bottom: 1em;
+  margin-right: 1.5%;
+          box-shadow: 0 1px 4px rgba(0,0,0,.5);
+     -moz-box-shadow: 0 1px 4px rgba(0,0,0,.5);
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.5);
+
+  &.mobile {
+    width: 10.5%;
+  }
+
+  &.tablet-portrait {
+    width: 19%;
+  }
+
+  &.tablet-landscape {
+    width: 25%;
+  }
+
+  &.desktop {
+    margin-right: 0;
+    width: 40.5%;
+  }
+}
+
+
+
 /* #Tablet (Portrait)
 ================================================== */
 
@@ -1414,16 +1442,16 @@ a img.aligncenter {
 									margin-right: 10px;
 								}
 						}
-				} 
+				}
 
         .mobile-image {
           display: block;
-        }  
+        }
 
         .project-nav {
           margin-top: 20px;
           text-align: left !important;
-        } 
+        }
 
         .item {
           height: 300px !important;
@@ -1582,7 +1610,7 @@ a img.aligncenter {
                 &:hover {
                   .opacity(100);
                 }
-                
+
                 &.red {
                   background: @red;
                 }

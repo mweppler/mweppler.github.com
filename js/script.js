@@ -31,6 +31,11 @@
       overlayColor: '#000',
       titlePosition: 'inside'
     });
+    $("#screenshots a.lightbox").fancybox({
+      overlayOpacity: 0.6,
+      overlayColor: '#000',
+      titlePosition: 'inside'
+    });
     $('a[rel=tipsy]').tipsy({
       fade: true,
       gravity: 's'
