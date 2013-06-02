@@ -1,5 +1,21 @@
 ---
 layout: base
+meta-description: "Matt Wepplers' blog & portfolio"
+meta-keywords: "CSS,HTML,JavaScript,PHP,Ruby on Rails,Web Development,XML"
+
+social-links:
+  - href: "https://coderwall.com/mweppler"
+    link: Coderwall
+  - href: "https://github.com/mweppler"
+    link: GitHub
+  - href: "https://www.linkedin.com/in/mweppler"
+    link: LinkedIn
+  - href: "http://www.meetup.com/members/9682886"
+    link: MeetUp
+  - href: "http://teamtreehouse.com/mweppler"
+    link: Team TreeHouse
+  - href: "https://twitter.com/mattweppler"
+    link: Twitter
 ---
 <div class="eleven columns alpha content">
     <h1>Hello, world!</h1>
@@ -28,15 +44,12 @@ layout: base
   <div class="widget categories">
     <h3>Social</h3>
     <ul>
-      <li><a href="https://coderwall.com/mweppler">Coderwall</a></li>
+      {% for list_item in page.social-links %}
+        <li><a href="{{ list_item.href }}">{{ list_item.link }}</a></li>
+      {% endfor %}
       <!-- <li><a href="http://www.ibm.com/developerworks/mydeveloperworks/profiles/user/mweppler">developerWorks</a></li> -->
-      <li><a href="https://github.com/mweppler">GitHub</a></li>
-      <li><a href="https://www.linkedin.com/in/mweppler">LinkedIn</a></li>
-      <li><a href="http://www.meetup.com/members/9682886">MeetUp</a></li>
       <!-- <li><a href="http://sourceforge.net/users/mweppler">SourceForge</a></li> -->
       <!-- <li><a href="http://stackoverflow.com/users/436167/mweppler">StackOverflow</a></li> -->
-      <li><a href="http://teamtreehouse.com/mweppler">TreeHouse</a></li>
-      <li><a href="https://twitter.com/mattweppler">Twitter</a></li>
     </ul>
   </div><!--/.well -->
 </aside><!--/span-->

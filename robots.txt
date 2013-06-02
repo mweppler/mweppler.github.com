@@ -1,0 +1,10 @@
+# This is the sitemap for Matt Weppler
+#
+# Updated 01 June 2013
+#
+# Visit http://mattweppler.info/
+
+User-agent: *
+Disallow:
+
+Sitemap: http://mattweppler.info/sitemap.xml

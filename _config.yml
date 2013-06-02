@@ -1,12 +1,79 @@
-auto: true
-lsi: false
-pygments: true
-server: true
+source:    .
+pygments:  true
+lsi:       false
+exclude:   [Gemfile, Gemfile.lock, Guardfile, Rakefile, README.md]
 
-navigation:
-- link: Home
-  href:  /index.html
-- link: Projects
-  href:  /projects.html
-- link: Resume
-  href:  /resume.html
+copyright: "Copyright 2013 Matt Weppler | All Rights Reserved."
+
+header-navigation:
+  - href:  /index.html
+    link: Home
+  - href:  /projects.html
+    link: Projects
+  - href:  /resume.html
+    link: Resume
+
+footer-navigation:
+  - class: icon-facebook-sign
+    href:  "https://www.facebook.com/mattweppler"
+    link:  Facebook
+  - class: icon-github-sign
+    href:  "https://github.com/mweppler"
+    link:  github
+  - class: icon-google-plus-sign
+    href:  "https://plus.google.com/u/0/108656258437565935806"
+    link:  Google+
+  - class: icon-linkedin-sign
+    href:  "https://www.linkedin.com/in/mweppler"
+    link:  LinkedIn
+  - class: icon-pinterest-sign
+    href:  "https://pinterest.com/mattweppler"
+    link:  Pinterest
+  - class: icon-twitter-sign
+    href:  "https://twitter.com/mattweppler"
+    link:  Twitter
+
+javascripts:
+  - name: live-reload
+    script: |
+      <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+  - name: jquery-1.7.1-cdn
+    script: |
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  - name: jquery-1.7.1-fallback
+    script: |
+      <script>window.jQuery || document.write('<script src="/js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+  - name: plugins
+    script: |
+      <script src="/js/plugins.js?v=1"></script>
+  - name: application
+    script: |
+      <script src="/js/script.js"></script>
+  - name: layer-slider
+    script: |
+      <script type="text/javascript">
+        $(document).ready(function(){
+          $('#layerslider').layerSlider({
+            skinsPath : '/css/layerslider/',
+            skin : 'powerful'
+          });
+        });
+      </script>
+  - name: google-analytics
+    script: |
+      <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-13008880-2']);
+        _gaq.push(['_setDomainName', 'mattweppler.info']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+
+stylesheets:
+  - name: style
+    stylesheet: |
+      <link rel="stylesheet" href="/css/style.css">

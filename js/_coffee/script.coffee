@@ -1,13 +1,10 @@
 $(document).ready ->
 
-
   # Dropdown menu ----------
-
   doOpen = ->
     $(this).addClass("hover")
     $('ul:first', this).slideDown(200, 'swing')
-   
- 
+
   doClose = ->
     $('ul:first', this).slideUp(200, 'swing', ->
       $(this).parent('li').removeClass("hover")
@@ -20,16 +17,13 @@ $(document).ready ->
     timeout: 100
     out: doClose
 
-
   $("nav.menu ul li:has(ul)").hoverIntent(config)
 
   # Slider -----------------
-
   $('#slider').nivoSlider()
 
 
   # ScrollUp ---------------
-
   $.scrollUp
     'location': 'right'
     'image_src': '/img/arrow_up.png'
@@ -45,14 +39,12 @@ $(document).ready ->
 
 
   # Tooltip ---------------
-
-   $('a[rel=tipsy]').tipsy
+  $('a[rel=tipsy]').tipsy
     fade: true
     gravity: 's'
 
 
   # Isotope ---------------
-
   $container = $('#portfolio-filter')
   cols = $container.data('cols')
 
@@ -63,9 +55,9 @@ $(document).ready ->
       columnWidth: $container.width() / cols
 
   $(window).smartresize ->
-      $container.isotope
-        masonry:
-          columnWidth: $container.width() / cols
+    $container.isotope
+      masonry:
+        columnWidth: $container.width() / cols
 
 
   $('#filters a').click ->
@@ -74,19 +66,17 @@ $(document).ready ->
     $(this).addClass('active')
     $container.isotope
       filter: selector
-    
+
     return false
 
 
   # Responsive menu ---------------
-
   $("nav.menu > ul").tinyNav
     active: 'current-menu-item'
 
 
 
   # Twitter feed ---------------
-
   K = ->
     a = navigator.userAgent
     ie: a.match(/MSIE\s([^;]*)/)
@@ -116,11 +106,11 @@ $(document).ready ->
 
 
   # set your twitter id
-  user = 'envato'
-    
+  user = 'mattweppler'
+
   # using jquery built in get json method with twitter api, return only one result
   $.getJSON('http://api.twitter.com/1/statuses/user_timeline.json?screen_name=' + user + '&include_rts=true&include_entities=true&count=2&callback=?', (data)->
-      
+
     # result returned
     tweet = data[0].text
 
@@ -144,7 +134,6 @@ $(document).ready ->
 
 
   # Close header notice ---------------
-
   $('.header-notice a.close').click ->
     $('.header-notice').slideUp(200)
 
@@ -152,24 +141,19 @@ $(document).ready ->
 
 
   # Remove alerts ---------------
-
   $('.alert .close').live('click', ->
     $(this).parent('.alert').fadeOut(200)
     return false
   )
 
 
-
   # Contact form ---------------
-
   validateEmail = (email)->
       re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\.+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(email)
 
   $('#contact_form').submit ->
-
     $('.alert', this).remove()
-
     $('input[type=submit]').attr('disabled', 'disabled')
 
     name = $('#name', this).val()
@@ -211,7 +195,7 @@ $(document).ready ->
                 <a href="#" class="close">X</a>
               </div>
         """
-      
+
       if data is 'success'
         $('#contact_form').prepend """
         <div class="alert alert-success">
@@ -225,14 +209,11 @@ $(document).ready ->
         $('input[type=submit]').removeAttr('disabled')
     )
 
-    
-    
-
     return false
 
   # Style switch ---------------
 
-  ## Style switcher 
+  ## Style switcher
   ###$('body').append """
   <div class="styleSwitch">
     <ul>
@@ -255,6 +236,4 @@ $(document).ready ->
     return false
 
   ###
-
-
 
