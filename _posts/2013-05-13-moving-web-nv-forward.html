@@ -1,0 +1,89 @@
+---
+layout: post
+meta-description:
+meta-keywords:
+preview: |
+  After rebuilding registration.gputechconf.com and showing just a little bit of whats possible from a mobile perspective, the decision was made that all web properties take a responsive approach.
+screenshots:
+  - alt:   SHIELD Phone Screenshot
+    class: mobile
+    full:  /img/for-posts/shield-phone.png
+    thumb: /img/for-posts/shield-phone-thumb.png
+  - alt:   SHIELD Tablet Portrait Screenshot
+    class: tablet-portrait
+    full:  /img/for-posts/shield-tablet-portrait.png
+    thumb: /img/for-posts/shield-tablet-portrait-thumb.png
+  - alt:   SHIELD Tablet Landscape Screenshot
+    class: tablet-landscape
+    full:  /img/for-posts/shield-tablet-landscape.png
+    thumb: /img/for-posts/shield-tablet-landscape-thumb.png
+  - alt:   SHIELD Desktop Screenshot
+    class: desktop
+    full:  /img/for-posts/shield-desktop.png
+    thumb: /img/for-posts/shield-desktop-thumb.png
+title: Moving the web forward @ NVIDIA (one rwd site at a time)
+---
+<h1 class="entry-title">Moving the web forward @ NVIDIA <small>(one rwd site at a time)</small></h1>
+<div class="entry-content">
+  <p>After rebuilding <a href="/2013/05/06/reflecting-on-time-spent-on-gtc.html" target="_blank">registration.gputechconf.com</a> and showing just a little bit of whats possible from a mobile perspective, the decision was made that going forward, for all web properties, we need to take a responsive approach.</p>
+
+  <p>So how would we start incorporating this into our existing web properties? How does a web developer begin building a responsive website? These are a few of the questions I intend to answer with the launch of <a href="http://shield.nvidia.com/" target="_blank">shield.nvidia.com</a>. When I first began working on the site I wanted to keep a journal for the very reason of answering questions like these but for a much larger audience. Unfortunately time did not allow for such a "frivolous" effort. So I'll have to answer this in retrospect.</p>
+
+  <p>Some of the early challenges faced were not development issues at all, instead they were design issues. This makes sense considering responsive web design starts at, well the design stage. Some of the stakeholders wanted a mobile first approach, others were still very tied to the desktop experience. These can be very conflicting strategies and finding a happy medium was not easy.</p>
+
+  <p>So what is "mobile first?" and what is "responsive web design?"</p>
+
+  <p><em>"Mobile First"</em> is a web design/development strategy. You start your design making, sure the content and experience are geared toward the mobile user. Screen real estate is limited, very limited, so ask yourself <em>"What is absolutely necessary to convey our point?"</em>. Get rid of the fluff. Most, if not all mobile users really don’t have time for it. I'd highly recommend this book on the topic: <a href="http://www.abookapart.com/products/mobile-first" target="_blank">http://www.abookapart.com/products/mobile-first</a></p>
+
+  <p>Not all of your users are mobile only users. And even your mobile users, at some point may get around to viewing your site on a tablet or desktop. This is where Responsive Web Design (or RWD) comes into play. With RWD the site is implemented so page content is optimized to suit the device the user is viewing it on. This doesn’t mean that you create unique experiences for each and every possible device that exists. Instead, you accomplish this through the use of a flexible grid, flexible videos &amp; images and CSS3 media queries. A lot goes into this process (in a future post i'll go through some of the decisions and workflow I use). A great book, again from "A book apart" is:  <a href="http://www.abookapart.com/products/responsive-web-design" target="_blank">http://www.abookapart.com/products/responsive-web-design</a></p>
+
+  <p>Because of the mobile momentum I created with registration.gputechconf.com, I was quickly moved onto a new project.</p>
+
+  <blockquote class="icon"><span>On January 7, 2013, NVIDIA managed to do something that seems to elude most companies these days: actually surprise the press with the unveiling of Project SHIELD, an impressive piece of portable gaming hardware.<br /><small><a href="http://goo.gl/OGeHP">( Quoted from a Forbes article: "NVIDIA's Project SHIELD: All The Launch Details Revealed" )</a></small></span></blockquote>
+
+  <p>I led the re-development of the <a href="http://shield.nvidia.com/" target="_blank">NVIDIA SHIELD</a> website! I worked closely with the stakeholders and the designers from the very beginning. The goal of this site was <em>"Mobile First"</em> and <em>"Responsive Web Design"</em>.</p>
+
+  <p>We had to move quick, so some basic wireframes were put together in a short period of time. They were handed off to me, and I began putting together a framework so we could incrementally and rapidly make this happen.</p>
+
+  <p>For the two weeks things were constantly changing. Layout, content, assets, etc... I kept my head down and kept up with this pace. About a week before we planned to launch, final comps came in. Most of the workflow and layout were complete at this point. Now it was time to kick it up a notch. Quick, get something staged for the stakeholders and leave just enough time to revise and execute on any feedback that comes in.</p>
+
+  <p>I think my last commit and push happened a few hours before the site was launched. QA ran through a final time. The war room was being set up. I closed my eyes (but certainly not my mind) for a nap before an all hands on deck.<br /><br />
+  ...but of course, things will go wrong at the worst possible times.
+  </p>
+
+  <p>I awoke to a few missed calls from the QA team. When I checked my voicemail, I heard the sweet sounds of "The image gallery is not working in Firefox!". Ugh! Firefox, I checked you, I know I did, WTF!</p>
+
+  <p>So with eyes not even fully open, I dart for my MacBook Pro, launch firefox and click a thumbnail from the image gallery slider. Nothing! No modal window. But why? And thats where one of my favorite tweets came to mind:</p>
+
+  <blockquote class="icon"><span>
+    <a href="https://twitter.com/html5douche">
+      <img alt="The HTML5 Douche" class="" src="/img/for-posts/because-learn-javascript.png" />
+    </a>
+  </span></blockquote>
+
+  <p>So I dug deep into my coffeescript (doesn't this make the tweet above even funnier?) looking for that magic line of code. You know, the line that begins:</p>
+
+  <code>
+    <pre>
+  () ->
+    imTheLineThat = isBreakingYourGalleryInFireFox
+    </pre>
+  </code>
+
+  <p>only, I just couldn't find it. So I started setting breakpoints in the compiled javascript via the browser console. No missing semicolons, nor misassignments, nor weird logic. In the end firefox wasn't firing the $image.load function I had written to assure the image was loaded before the modal window opens. What now? Simple, google "firefox why you no like jquery image load" which led me to: <a href="http://stackoverflow.com/questions/3877027/jquery-callback-on-image-load-even-when-the-image-is-cached" target="_blank">http://stackoverflow.com/questions/3877027/jquery-callback-on-image-load-even-when-the-image-is-cached</a></p>
+
+  <p>This was my problem exactly. Pretty much if the image has loaded from cache, the method I was calling "$image.load" would not fire. I tried several solutions, some of which solved the problem in firefox but caused issues in safari, or chrome, or IE, etc... I ended up keeping my original code and putting in a special case for firefox. Bad practice yeah, but under a time crunch what are you going to do. "Just get it working", fix it later.</p>
+
+  <p>Problem solved, commit, push, stage, QA, green light to launch!</p>
+
+  <div id="screenshots" class="clearfix">
+    {% for screenshot in page.screenshots %}
+      <div class="">
+        <a href="{{ screenshot.full }}" class="lightbox" rel="portfolio" title="{{ screenshot.alt }}" target="_blank">
+          <img alt="{{ screenshot.alt }}" class="{{ screenshot.class }}" src="{{ screenshot.thumb }}" />
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+
+</div>
