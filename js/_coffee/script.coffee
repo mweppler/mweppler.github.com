@@ -37,7 +37,7 @@ $(document).ready ->
     overlayColor: '#000'
     titlePosition: 'inside'
 
-  $("#screenshots a.lightbox").fancybox
+  $("a.lightbox").fancybox
     overlayOpacity: 0.6
     overlayColor: '#000'
     titlePosition: 'inside'

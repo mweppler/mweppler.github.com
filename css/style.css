@@ -2261,7 +2261,9 @@ dd.clear {
 body {
   border-top: 3px solid #2481ff;
   background: url('../img/bg.jpg') repeat;
-  font-size: 13px;
+  /*font-size: 13px;*/
+
+  font-size: 100%;
   font-family: 'Helvetica Neue', Helvetica, Arial;
   font-weight: 300;
   line-height: 1.5;
@@ -3548,6 +3550,10 @@ a img.aligncenter {
   -o-transition-property: top, left, opacity;
   transition-property: transform, opacity;
 }
+h1.entry-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
 #screenshots img {
   float: left;
   margin-bottom: 1em;
@@ -3557,17 +3563,17 @@ a img.aligncenter {
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 #screenshots img.mobile {
-  width: 10.5%;
+  width: 9%;
 }
 #screenshots img.tablet-portrait {
-  width: 19%;
+  width: 19.75%;
 }
 #screenshots img.tablet-landscape {
-  width: 25%;
+  width: 26%;
 }
 #screenshots img.desktop {
   margin-right: 0;
-  width: 40.5%;
+  width: 40%;
 }
 /* #Tablet (Portrait)
 ================================================== */
