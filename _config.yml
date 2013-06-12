@@ -5,6 +5,9 @@ exclude:   [Gemfile, Gemfile.lock, Guardfile, Rakefile, README.md]
 
 copyright: "Copyright 2013 Matt Weppler | All Rights Reserved."
 
+contact-info:
+  email: matt@weppler.me
+
 header-navigation:
   - href:  /index.html
     link: Home
