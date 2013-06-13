@@ -1,0 +1,55 @@
+---
+layout: post
+meta-description: iOS 7 Connecting to WPA2 Enterprise WiFi
+meta-keywords: ios7, ios 7, wpa2, enterprise wifi
+preview: |
+  iOS 7 - Issues connecting to a WPA2 Enterprise Wifi network
+title: iOS 7 Enterprise Wifi Issue
+---
+<h1 class="entry-title">iOS 7 Enterprise Wifi Issue</h1>
+<div class="entry-content">
+  <p>So I installed the iOS 7 beta last night, and I love it so far. One issue I found though is connecting to the wifi at work. I work on and test sites all day, especially those of a responsive nature. Since iOS 7 is not offically supported I knew I was on my own on this one. So I went straight to google, I found the "iPhone Configuration Utility".</p>
+
+  <p>This was a good start and after some trial and error ( and an hour or two ), I was able to get the wifi connected. Below are the steps I took, granted your environment may be a bit different but I hope this helps somewhat.</p>
+
+  <p>
+    <ul>
+      <style>
+        li { margin: 10px 0; }
+      </style>
+      <li>Download &amp; Install the <a href="http://support.apple.com/kb/dl1465" target="_blank">"iPhone Configuration Utility"</a><br /></li>
+      <li>
+        Launch "Keychain Access", from "Keychains" click "System", from "category" click "Certificates"<br />
+        <a href="/img/for-posts/keychain.jpg" class="lightbox"><img alt="Keychain Access" src="/img/for-posts/keychain.jpg" /></a>
+      </li>
+      <li>
+        Export the certificate. Which certificate you ask? I only knew because I had to do a similar process for a blackberry sometime ago. I still had the cert from that process.<br />
+        <a href="/img/for-posts/export-cert.jpg" class="lightbox"><img alt="Export the Certificate from Keychain Access" src="/img/for-posts/export-cert.jpg" /></a>
+      </li>
+      <li>Launch the iPhone Configuration Utility from: "/Applications/Utilities/iPhone Configuration Utility"</li>
+      <li>Create a new Configuration Profile</li>
+      <li>From the General section, fill in the manditory fields</li>
+      <li>
+        From the Credentials section, drag and drop the certificate<br />
+        <a href="/img/for-posts/icu-cert.jpg" class="lightbox"><img alt="Drag and drop the Certificate in the Credentials section" src="/img/for-posts/icu-cert.jpg" /></a>
+      </li>
+      <li>
+        From the Wifi section, fill in the necessary info (username, password, security type, etc...)<br />
+        <a href="/img/for-posts/icu-wifi-main.jpg" class="lightbox"><img alt="Fill in the SSID in the Wifi section" src="/img/for-posts/icu-wifi-main.jpg" /></a>
+        <a href="/img/for-posts/icu-wifi-proto.jpg" class="lightbox"><img alt="Select the Protocols in the Wifi section" src="/img/for-posts/icu-wifi-proto.jpg" /></a>
+        <a href="/img/for-posts/icu-wifi-auth.jpg" class="lightbox"><img alt="Fill in your Authentication settings in the Wifi section" src="/img/for-posts/icu-wifi-auth.jpg" /></a>
+        <a href="/img/for-posts/icu-wifi-trust.jpg" class="lightbox"><img alt="Select your Certificate in the Wifi section" src="/img/for-posts/icu-wifi-trust.jpg" /></a>
+      </li>
+      <li>Email the Profile to your device</li>
+      <li>
+        From your device, open &amp; install the profile/attachment from your email<br />
+        <a href="/img/for-posts/email-profile.jpg" class="lightbox"><img alt="Open the email containing the profile/attachment from your device" src="/img/for-posts/email-profile.jpg" /></a>
+        <a href="/img/for-posts/install-profile.jpg" class="lightbox"><img alt="Install the Profile on your device" src="/img/for-posts/install-profile.jpg" /></a>
+      </li>
+      <li>
+        Open "Settings" and "Wifi", it may connect without an issue, I had to restart my phone and connect again in order for it to work.<br />
+        <a href="/img/for-posts/wifi-connected.jpg" class="lightbox"><img alt="Connect to the Wifi from your device" src="/img/for-posts/wifi-connected.jpg" /></a>
+      </li>
+    </ul>
+  </p>
+</div>
