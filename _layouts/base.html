@@ -29,7 +29,7 @@
 <body>
 
   <!--[if lt IE 10]>
-    <p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
+    <p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/" target="_blank">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true" target="_blank">install Google Chrome Frame</a> to experience this site.</p>
   <![endif]-->
 
   <noscript>
@@ -51,10 +51,12 @@
       <div class="ten columns">
         <nav class="menu">
           <ul>
-            {% for list_item in site.header-navigation %}
+            {% for nav_item in site.navigation-header %}
               {% assign current = nil %}
-              {% if page.url == list_item.href %} {% assign current = 'current-menu-item' %} {% endif %}
-              <li class="{% unless current.nil? %} {{ current }} {% endunless %}"><a href="{{ list_item.href }}">{{ list_item.link }}</a></li>
+              {% if page.url == nav_item.href %} {% assign current = 'current-menu-item' %} {% endif %}
+              <li class="{% unless current.nil? %} {{ current }} {% endunless %}">
+                <a href="{{ nav_item.href }}" {% unless nav_item.local %} target="_blank" {% endunless %}>{{ nav_item.link }}</a>
+              </li>
             {% endfor %}
           </ul>
         </nav><!-- /menu -->
@@ -99,8 +101,10 @@
         <div class="sixteen columns">
           <p class="eight columns alpha">{{ site.copyright }}</p>
           <div class="eight columns omega social-buttons">
-            {% for list_item in site.footer-navigation %}
-              <a href="{{ list_item.href }}"><i class="{{ list_item.class }}"></i></a>
+            {% for nav_item in site.navigation-footer %}
+              <a href="{{ nav_item.href }}" {% if nav_item.extra != '' %} {{ nav_item.extra }} {% endif %} {% unless nav_item.local %} target="_blank" {% endunless %}>
+                <i class="{{ nav_item.class }}"></i>
+              </a>
             {% endfor %}
             <!-- <a href="#"><i class="icon-rss"></i></a> -->
         </div>

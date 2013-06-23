@@ -8,33 +8,48 @@ copyright: "Copyright 2013 Matt Weppler | All Rights Reserved."
 contact-info:
   email: matt@weppler.me
 
-header-navigation:
+navigation-header:
   - href:  /index.html
     link: Home
+    local: true
   - href:  /projects.html
     link: Projects
+    local: true
   - href:  /resume.html
     link: Resume
+    local: true
 
-footer-navigation:
+navigation-footer:
   - class: icon-facebook-sign
+    extra:
     href:  "https://www.facebook.com/mattweppler"
     link:  Facebook
+    local: false
   - class: icon-github-sign
+    extra:
     href:  "https://github.com/mweppler"
     link:  github
+    local: false
   - class: icon-google-plus-sign
+    extra: rel="author"
     href:  "https://plus.google.com/108656258437565935806?rel=author"
     link:  Google+
+    local: false
   - class: icon-linkedin-sign
+    extra:
     href:  "https://www.linkedin.com/in/mweppler"
     link:  LinkedIn
+    local: false
   - class: icon-pinterest-sign
+    extra:
     href:  "https://pinterest.com/mattweppler"
     link:  Pinterest
+    local: false
   - class: icon-twitter-sign
+    extra:
     href:  "https://twitter.com/mattweppler"
     link:  Twitter
+    local: false
 
 javascripts:
   #- name: live-reload

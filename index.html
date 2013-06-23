@@ -45,8 +45,8 @@ title: Blog
   <div class="widget categories">
     <h3>Social</h3>
     <ul>
-      {% for list_item in page.social-links %}
-        <li><a href="{{ list_item.href }}">{{ list_item.link }}</a></li>
+      {% for nav_item in page.social-links %}
+        <li><a href="{{ list_item.href }}" target="_blank">{{ nav_item.link }}</a></li>
       {% endfor %}
       <!-- <li><a href="http://www.ibm.com/developerworks/mydeveloperworks/profiles/user/mweppler">developerWorks</a></li> -->
       <!-- <li><a href="http://sourceforge.net/users/mweppler">SourceForge</a></li> -->
