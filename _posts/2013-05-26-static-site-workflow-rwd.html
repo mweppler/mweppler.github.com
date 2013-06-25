@@ -20,9 +20,9 @@ title: A Static Site Workflow, with a touch of Responsive Web Design
     <strong>Styling...</strong> That's a no brainer, write some clean, well organized CSS yeah? Well, almost... lets use SASS instead! Why sass over plain css? Who doesn't love a good preprocessor is what it really comes down to. A lot of great articles have been written on this topic so I'll just list a few of my favorite reasons:
     <ul>
       <li>Because this is ugly:
-      <code><pre>  p.green-nv { color: #76b900; }</pre></code></li>
+      <pre><code>  p.green-nv { color: #76b900; }</code></pre></li>
       <li>and this is pretty:
-      <code><pre>  p.green-nv { color: $nv_green; }</pre></code></li>
+      <pre><code>  p.green-nv { color: $nv_green; }</code></pre></li>
     </ul>
     <a href="/img/for-posts/nvidia-brand-color.png" class="lightbox" target="_blank"><img alt="NVIDIA Brand Color" src="/img/for-posts/nvidia-brand-color.png" style="float: right; margin: 0 25px; width: 25%;" /></a>
     Not to mention new developers don't like asking <em>"Hey what is our brand color's hex value"</em> a bunch of times (until they write it down or remember it) as much as I don't like answering it. Though it became easier to just point them to <a href="http://brandcolors.net/" target="_blank">Brand Colors</a>, thanks <a href="https://twitter.com/galengidman" target="_blank">@galengidman</a> for adding NVIDIAs' to the site.<br />
@@ -52,22 +52,22 @@ title: A Static Site Workflow, with a touch of Responsive Web Design
 
   <p>
     Quickly I realized adding a Gemfile to the project would make life easier on anyone jumping in. So a Gemfile was born.
-    <code>
-      <pre>
+    <pre>
+      <code>
   gem 'classifier', '~> 1.3' # jekyll dependency
   gem 'compass', '0.12.2'
   gem 'directory_watcher', '~> 1.4.1' # jekyll dependency
   gem 'jekyll', '1.0.0.rc1'
   gem 'liquid', '2.5.0' # jekyll dependency
   gem 'maruku', '0.6.1' # jekyll dependency
-      </pre>
-    </code>
+      </code>
+    </pre>
   </p>
 
   <p>
     At first I was using a separate process to compile the assets (styles &amp; scripts). Compass for sass to css &amp; watching my coffeescript directory to compile to javascript. Actually I am lying a bit, I really use livereload which is great. Compiles your sass, coffeescript &amp; even reloads the page for you. Of course great for me, but not so great for my windows comrades. Guard? Yup, Guard! So now I needed a guard file. No problem, but first lets add our guard gems.
-    <code>
-      <pre>
+    <pre>
+      <code>
   gem 'guard', '1.7.0'
   gem 'guard-coffeescript'
   gem 'guard-compass', '0.0.6' # guard dependency
@@ -81,14 +81,14 @@ title: A Static Site Workflow, with a touch of Responsive Web Design
   group :windows do
     gem 'wdm'
   end
-      </pre>
-    </code>
+      </code>
+    </pre>
   </p>
 
   <p>
     ...and now my guard file:
-    <code>
-      <pre>
+    <pre>
+      <code>
   # Using compass instead of guard-sass
   #guard :sass, :output => 'stylesheets/_compiled' do
     #watch(%r{^stylesheets/_sass/.+\.scss})
@@ -116,8 +116,8 @@ title: A Static Site Workflow, with a touch of Responsive Web Design
   #guard :livereload, :grace_period => 0.5 do
     #watch(%r{^_site/.+\.(css|js|html)})
   #end
-      </pre>
-    </code>
+      </code>
+    </pre>
   </p>
 
   <p>
@@ -133,8 +133,8 @@ title: A Static Site Workflow, with a touch of Responsive Web Design
   <p>
     This is where things get responsive err interesting. Prior to a solid set of comps, I was mostly organizing the project. Breaking up styling components like fonts, colors, basic classes I like to reuse, etc... into separate files. With the comps came time to create a grid. For that I use <a href="http://gridulator.com/" target="_blank">gridulator</a>. A great starting point, you can even use the png's to overlay on the psd's. Ok, but gridulator spits out pixel widths, don't we use percents? Yes, here is an example of converting the pixel widths from gridulator to percentages.<br /><br />
     Heres our grid, everything here should be pretty self explanatory.
-    <code>
-      <pre>
+    <pre>
+      <code>
   /* GRID http://gridulator.com/
    * Width: 1280px
    * Columns: 8
@@ -159,11 +159,11 @@ title: A Static Site Workflow, with a touch of Responsive Web Design
 
   .grid-container { margin: auto; max-width: 1160px; width: 1160px; }
   /*****************************************************************************/
-      </pre>
-    </code>
+      </code>
+    </pre>
     Now here is our responsive grid:
-    <code>
-      <pre>
+    <pre>
+      <code>
   /* Responsive Grid */
   .grid-1  { width: 9.48275862069%; }   /* 110px */
   .grid-2  { width: 22.413793103448%; } /* 260px */
@@ -176,8 +176,8 @@ title: A Static Site Workflow, with a touch of Responsive Web Design
   .grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8 { margin: 0 3.44% 1% 0; }
   .grid-container { width: 90%; }
   /*****************************************************************************/
-      </pre>
-    </code>
+      </code>
+    </pre>
   </p>
 
   <p>How did we come up with this? Lets start with the .grid-8 class, pretty simple we take the 1160px (1280 width minus the left &amp; right 60px margins) and divide by itself (1160), then we multiply by 100 to get our percent. In this case 100%.</p>
@@ -185,7 +185,7 @@ title: A Static Site Workflow, with a touch of Responsive Web Design
   <p>Now for our .grid-7 class, take our target of 1010px and divide that by our context 1160px. We get 0.870689655172414 give or take a few digits... multiply that by 100 for 87.068965517241%.</p>
 
   <p>We do that for the remaining grid classes, target divided by context multiplied by 100. The only place I deviate from this is at the 320x480 media query. There I just make all the grid classes take up 100% of the width.
-    <code><pre>  .grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8 { width: 100%; }</pre></code>
+    <pre><code>  .grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8 { width: 100%; }</code></pre>
     Great we have our fluid grid, now lets markup the page.
   </p>
 

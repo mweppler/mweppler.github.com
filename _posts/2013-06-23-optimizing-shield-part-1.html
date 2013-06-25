@@ -17,21 +17,27 @@ title: Optimizing the shield site - Part 1
   <p>So in the network panel I click to sort by "Duration" and its quite obvious that I need to do something about these images. Lets take one and work with it, "shield-cover-open.png" is a fine choice. Why you ask? It was one of the larger images. So what do we know about this image? Its of type png, its about 672 KB, and the dimensions are 1920x1080. It is part of the image gallery.<a href="/img/for-posts/optimizing-shield-part-1/png-images-duration.jpg" class="lightbox"><img alt="Chrome Network Panel sorted by Duration" src="/img/for-posts/optimizing-shield-part-1/png-images-duration.jpg" style="float: right; margin: 5px; width: 20%;" /></a></p>
 
   <p>Since its a picture and doesn't have transparency, we can convert it to a jpg file which will reduce the file size a great deal. When I do this my eye can't really notice a difference but the file size has been reduced to 205 KB. Thats a difference of 467 KB or 106.5%. Great, I'll take it! Now I just need to apply that to the rest of the images. In this case I have about 8 or so and don't want to do this manually for each one. I use a Mac and have ImageMagick installed. It has a handy command line tool <strong>'convert'</strong> <em>(you may want to google "batch convert png to jpg" and find a solution that suits your development environment)</em>. So I change into the directory and run the following from the command line:
-  <pre><code>
-for file in *.png; do convert $file ${file%.png}.jpg; done
-  </code></pre>
-  <small><em>Quick tip: Summing size of a list of images (or any file type for that matter)</em></small>
-  <pre><code>
-ls -ls *.jpg | awk '{ sum += $6 } END { printf "size: %.2f MB\n", sum/1048576 }'
-  </code></pre>
+    <pre>
+      <code>
+  for file in *.png; do convert $file ${file%.png}.jpg; done
+      </code>
+    </pre>
+    <small><em>Quick tip: Summing size of a list of images (or any file type for that matter)</em></small>
+    <pre>
+      <code>
+  ls -ls *.jpg | awk '{ sum += $6 } END { printf "size: %.2f MB\n", sum/1048576 }'
+      </code>
+    </pre>
   </p>
 
   <p>This will convert all .png files in the current directory to .jpg. I've reduced the total size from: 6.56 MB to 1.54 MB. Now I just have to change the src attribute of my img tags in the markup. This should dramatically reduce the amount of time it takes to download these images and your users on a slower connection won't hate you as much.</p>
 
   <p>Ok so what about the images on the page that you can't convert to jpg. For those lets run them through a tool to compress them a bit more. I use <strong>'pngcrush'</strong> but I am sure you can find a similar tool for your development environment.
-  <pre><code>
-for file in *.png; do pngcrush -reduce -brute $file crushed-$file &amp;&amp; mv crushed-$file $file; done
-  </code></pre>
+    <pre>
+      <code>
+  for file in *.png; do pngcrush -reduce -brute $file crushed-$file &amp;&amp; mv crushed-$file $file; done
+      </code>
+    </pre>
   </p>
 
   <p>This takes the the pngs in the image directory from: 6.01 MB to 3.61 MB. Since we're replacing our existing png files and not creating new ones, there is no need to change anything in our markup.</p>
@@ -43,16 +49,20 @@ for file in *.png; do pngcrush -reduce -brute $file crushed-$file &amp;&amp; mv 
   <p>So you'll either want to involve the creative team <em>(if you have one)</em> or use photoshop and create it yourself. Another option, and the one I'll use here is to let <a href="http://compass-style.org/help/tutorials/spriting/" target="_blank">Compass</a> generate the sprites for me.</p>
 
   <p>I am going to start with the gallery navigation <em>(next &amp; previous)</em> buttons. So I create a folder for that sprite called "gallery-navigation" within the images directory. Next I add the following to my sass file:<br />
-  <pre><code>
-@import “gallery-navigation/*.png”;
-  </code></pre>
+    <pre>
+      <code>
+  @import “gallery-navigation/*.png”;
+      </code>
+    </pre>
 
-  Then I include the next and previous buttons like so:
+    Then I include the next and previous buttons like so:
 
-  <pre><code>
-.next { @include gallery-navigation-sprite(gallery-next-button); right: 0; }
-.previous { @include gallery-navigation-sprite(gallery-previous-button); left: 0; }
-  </code></pre>
+    <pre>
+      <code>
+  .next { @include gallery-navigation-sprite(gallery-next-button); right: 0; }
+  .previous { @include gallery-navigation-sprite(gallery-previous-button); left: 0; }
+      </code>
+    </pre>
   </p>
 
   <p>Sure spriting 2 images is only one less request but I'll take a few small wins where I can. Lets apply the same technique but this time to the menu open/close toggle images that are shown when we're on a tablet/phone. We can also add the <em>"back to top"</em> button, which is another mobile only image. Now we went from 5 requests to 2. What else can we sprite! Word of advice, just because you have this new shiny hammer, doesn't mean everything is a nail waiting to be struck.</p>

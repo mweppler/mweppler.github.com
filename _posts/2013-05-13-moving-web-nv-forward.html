@@ -63,12 +63,12 @@ title: Moving the web forward @ NVIDIA (one rwd site at a time)
 
   <p>So I dug deep into my coffeescript (doesn't this make the tweet above even funnier?) looking for that magic line of code. You know, the line that begins:</p>
 
-  <code>
-    <pre>
+  <pre>
+    <code>
   () ->
     imTheLineThat = isBreakingYourGalleryInFireFox
-    </pre>
-  </code>
+    </code>
+  </pre>
 
   <p>only, I just couldn't find it. So I started setting breakpoints in the compiled javascript via the browser console. No missing semicolons, nor misassignments, nor weird logic. In the end firefox wasn't firing the $image.load function I had written to assure the image was loaded before the modal window opens. What now? Simple, google "firefox why you no like jquery image load" which led me to: <a href="http://stackoverflow.com/questions/3877027/jquery-callback-on-image-load-even-when-the-image-is-cached" target="_blank">http://stackoverflow.com/questions/3877027/jquery-callback-on-image-load-even-when-the-image-is-cached</a></p>
 
