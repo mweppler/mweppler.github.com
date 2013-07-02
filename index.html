@@ -19,26 +19,26 @@ social-links:
 title: Blog
 ---
 <div class="eleven columns alpha content">
-    <h1>Hello, world!</h1>
-    <p>I am a developer, and so can you!</p>
-    <hr />
-    {% for post in site.posts %}
-      <article class="post type-post format-standard clearfix">
-        <div class="three columns alpha meta">
-          <ul>
-            <li class="clearfix type"><a href="{{ post.url }}"><i class="icon-file"></i></a></li>
-            <li><strong>Posted:</strong> {{ post.date | date: "%B %d, %Y" }}</li>
-            <!-- <li><strong>Type:</strong> <a href="#">{{ post.myvar }}</a></li> -->
-            <!-- <li><strong>Comments:</strong> <a href="#">5</a></li> -->
-          </ul>
-        </div>
+  <h1>Hello, world!</h1>
+  <p>I am a developer, and so can you!</p>
+  <hr />
+  {% for post in site.posts %}
+    <article class="post type-post format-standard clearfix">
+      <div class="three columns alpha meta">
+        <ul>
+          <li class="clearfix type"><a href="{{ post.url }}"><i class="icon-file"></i></a></li>
+          <li><strong>Posted:</strong> {{ post.date | date: "%B %d, %Y" }}</li>
+          <!-- <li><strong>Type:</strong> <a href="#">{{ post.myvar }}</a></li> -->
+          <!-- <li><strong>Comments:</strong> <a href="#">5</a></li> -->
+        </ul>
+      </div>
 
-        <div class="eight columns omega text">
-          <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-          <p>{{ post.preview | truncatewords: 35 }}</p>
-        </div>
-      </article>
-    {% endfor %}
+      <div class="eight columns omega text">
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <p>{{ post.preview | truncatewords: 35 }}</p>
+      </div>
+    </article>
+  {% endfor %}
 </div><!--/span-->
 
 <aside class="five columns omega sidebar">
@@ -54,6 +54,26 @@ title: Blog
     </ul>
     <small>...more social links down below</small>
   </div><!--/.well -->
+
+  <!-- Begin MailChimp Signup Form -->
+  <div class="call-to-action">
+    <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+      #mc_embed_signup { clear: left; font: 14px Helvetica, Arial, sans-serif; }
+      /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+         We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+      #mce-EMAIL { background-color: #fff; margin-top: 10px; width: 90%; }
+      #mc-embedded-subscribe { margin-top: 10px; }
+    </style>
+    <div id="mc_embed_signup">
+    <form action="http://mattweppler.us2.list-manage.com/subscribe/post?u=e71d3c3ed2fd2e444fa8717f3&amp;id=c36903af81" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <label for="mce-EMAIL">Stay updated!</label>
+      <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+      <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button branded" />
+    </form>
+    </div>
+  </div>
+  <!--End mc_embed_signup-->
 </aside><!--/span-->
 
 
