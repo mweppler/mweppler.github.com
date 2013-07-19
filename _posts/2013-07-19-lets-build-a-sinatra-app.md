@@ -3,7 +3,7 @@ layout: post
 meta-description: Building a simple sinatra app.
 meta-keywords: sinatra, haml, datamapper
 preview: |
-  So at this point you  might be saying “I thought this was a post about Sinatra?” or maybe I already lost a few of you. So before I lose any more of you, "Let's get the show on the road!".
+  So at this point you  might be saying “I thought this was a post about Sinatra?” or maybe I already lost a few of you. So before I lose any more of you, "Let's get the [[show]] on the road!".
 syntax-highlighting: true
 title: Lets Build a Sinatra App
 ---
@@ -20,7 +20,29 @@ I have to make a few assumptions here in order to keep this a blog post. One is 
 
 I'll start by modeling the app a bit. For now just the basics. I am going to have a video object with fields like title, length, description, image & genre. I'll need a storage location. I’ll need a way to add this info about the video, upload the video, and watch it, especially on my iPad.
 
-A few things to note, I am developing and running this from my Mac. I believe everything should work just the same on Linux, though I'm not so sure about Windows. Some things will be commands I run from the terminal. To begin, we need to open terminal and install a few things. If you're not comfortable on the commandline I'd suggest you read up on basics. You should still be able to follow along, but if your goal is to be a developer you should really have a basic understanding. If you have a few hours and about $24, a great resource is the "Meet the Command Line" videos over at http://peepcode.com
+A few things to note, I am developing and running this from my Mac. I believe everything should work just the same on Linux, though I'm not so sure about Windows. I will be using haml http://haml.info/ for the markup. So instead of having to type out this:
+
+{% highlight html %}
+<section class=”container”>
+  <h1><%= post.title %></h1>
+  <h2><%= post.subtitle %></h2>
+  <div class=”content”>
+    <%= post.content %>
+  </div>
+</section>
+{% endhighlight %}
+
+we can just type this:
+
+{% highlight ruby %}
+%section.container
+  %h1= post.title
+  %h2= post.subtitle
+  .content
+    = post.content
+{% endhighlight %}
+
+Time to kick things off, we need to open terminal and install a few things. If you're not comfortable on the commandline I'd suggest you read up on basics. You should still be able to follow along, but if your goal is to be a developer you should really have a basic understanding. If you have a few hours and about $24, a great resource is the "Meet the Command Line" videos over at http://peepcode.com
 
     https://peepcode.com/products/meet-the-command-line
     https://peepcode.com/products/advanced-command-line
@@ -167,7 +189,7 @@ configure do
 end
 {% endhighlight %}
 
-Our video class is going to need to inherit from DataMapper:
+Our video class is going to need access to some DataMapper methods so well need to include it in our models:
 
 {% highlight ruby %}
 class Video
@@ -261,7 +283,6 @@ I want to finish off this first sprint by building out our layout:
     %meta{"http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1" }
     %meta{ :charset => "utf-8" }
     %title= @title || 'The Video Store'
-    %link{ :rel => "stylesheet",  :href => "/css/styles.css" }
   %body
     .container
       = yield
@@ -318,23 +339,23 @@ Now lets create the view which is basically a form. Within the views directory c
 
 {% highlight ruby %}
 %h1= @title
-%form{ :action => "/video/create", :method => "post", :id => "video-form", :enctype => "multipart/form-data" }
+%form#video-form{ :action => "/video/create", :method => "post", :enctype => "multipart/form-data" }
   %label Title:
-  %input{ :type => "text", :name => "video[title]", :id => "title" }
+  %input#title{ :type => "text", :name => "video[title]" }
   %label Description:
-  %input{ :type => "text", :name => "video[description]", :id => "description" }
+  %input#description{ :type => "text", :name => "video[description]" }
   %label Genre:
-  %input{ :type => "text", :name => "video[genre]", :id => "genre" }
+  %input#genre{ :type => "text", :name => "video[genre]" }
   %label Length:
-  %input{ :type => "text", :name => "video[length]", :id => "length" }
+  %input#length{ :type => "text", :name => "video[length]" }
   %label Image:
-  %input{ :type => "file", :name => "image-file", :id => "image-file" }
+  %input#image-file{ :type => "file", :name => "image-file" }
   %label Video:
-  %input{ :type => "file", :name => "video-file", :id => "video-file" }
+  %input#video-file{ :type => "file", :name => "video-file" }
   %input{ :type => "submit" }
 {% endhighlight %}
 
-Create a view to show our success message 'create.haml' and add a simple:
+Create another view to show our success message 'create.haml' and add a simple:
 
 {% highlight ruby %}
 %h1= @message
@@ -377,39 +398,41 @@ body { width: 100%; }
 .container { margin: 0 auto; max-width: 960px; }
 {% endhighlight %}
 
-Now lets clean up the upload form. Update the upload.haml file with:
+Now lets clean up the upload form. Update the new.haml file with:
 
 {% highlight ruby %}
-%form{ :action => "/video/create", :class => "pure-form pure-form-aligned", :method => "post", :id => "video-form", :enctype => "multipart/form-data" }
+%form#video-form.pure-form.pure-form-aligned{ :action => "/video/create", :method => "post", :enctype => "multipart/form-data" }
   %fieldset
     %legend= @title
-    %div{ :class => "pure-control-group" }
+    .pure-control-group
       %label Title:
-      %input{ :type => "text", :name => "video[title]", :id => "title" }
+      %input#title{ :type => "text", :name => "video[title]" }
 
-    %div{ :class => "pure-control-group" }
+    .pure-control-group
       %label Description:
-      %textarea{ :name => "video[description]", :id => "description" }
+      %textarea#description{ :name => "video[description]" }
 
-    %div{ :class => "pure-control-group" }
+    .pure-control-group
       %label Genre:
-      %input{ :type => "text", :name => "video[genre]", :id => "genre" }
+      %input#genre{ :type => "text", :name => "video[genre]" }
 
-    %div{ :class => "pure-control-group" }
+    .pure-control-group
       %label Length:
-      %input{ :type => "text", :name => "video[length]", :id => "length" }
+      %input#length{ :type => "text", :name => "video[length]" }
 
-    %div{ :class => "pure-control-group" }
-      %label>Image:
-      %input{ :type => "file", :name => "image-file", :id => "image-file" }
+    .pure-control-group
+      %label Image:
+      %input#image-file{ :type => "file", :name => "image-file" }
 
-    %div{ :class => "pure-control-group" }
-      %label>Video:
-      %input{ :type => "file", :name => "video-file", :id => "video-file" }
+    .pure-control-group
+      %label Video:
+      %input#video-file{ :type => "file", :name => "video-file" }
 
-    %div{ :class => "pure-controls" }
-      %button{ :type => "submit", :class => "pure-button pure-button-primary" } Submit
+    .pure-controls
+      %button.pure-button.pure-button-primary{ :type => "submit" } Submit
 {% endhighlight %}
+
+![New/Upload View](/img/for-posts/lets-build-a-sinatra-app/new-view.png "New/Upload View")
 
 Now that thats out of the way lets add a way to view videos that we've uploaded. In other words lets add a /video/list route in video_store.rb:
 
@@ -432,7 +455,7 @@ end
   %a{ :href => "/video/list" } Available Videos
 {% endhighlight %}
 
-Make this view pretty:
+Make this list.haml view pretty:
 
 {% highlight ruby %}
 %h1= @title
@@ -452,6 +475,8 @@ Make this view pretty:
         %td= video.genre
 {% endhighlight %}
 
+![List View](/img/for-posts/lets-build-a-sinatra-app/list-view.png "List View")
+
 Ok, one last step. Lets add a way to get all the videos details as we'll as an option to watch it! So lets add the route in video_store.rb:
 
 {% highlight ruby %}
@@ -466,7 +491,13 @@ get '/video/show/:id' do
 end
 {% endhighlight %}
 
-...and we'll add a link in the list view. We'll make the title the link element:
+...and we'll add a link in the list view list.haml. We'll make the title the link element so update the code:
+
+{% highlight ruby %}
+%td= video.title
+{% endhighlight %}
+
+to:
 
 {% highlight ruby %}
 %td
@@ -499,23 +530,8 @@ For now we're just going to add the same elements from the list view, only we'll
 ...and add a watch link. Wait a watch link? Yeah a watch link:
 
 {% highlight ruby %}
-%h1= @title
-%table.pure-table
-  %thead
-    %tr
-      %td Title
-      %td Length
-      %td Description
-      %td Genre
-      %td
-  %tbody
-    %tr
-      %td= @video.title
-      %td= @video.length
-      %td= @video.description
-      %td= @video.genre
-      %td
-        %a{ :href => "#" } Watch
+%td
+  %a{ :href => "#" } Watch
 {% endhighlight %}
 
 So does this mean we're going to need a route and view as well? Umm, yeah sure. Can you handle that?
@@ -524,6 +540,8 @@ So does this mean we're going to need a route and view as well? Umm, yeah sure. 
 %td
   %a{ :href => "/video/watch/#{@video.id}" } Watch
 {% endhighlight %}
+
+![Show View](/img/for-posts/lets-build-a-sinatra-app/show-view.png "Show View")
 
 So thats the link. What about the route:
 
@@ -562,4 +580,8 @@ end
   Your browser does not support the <code>video</code> element.
 {% endhighlight %}
 
-Wow that was a lot of work. Its time for another high five and commit! It's also time for me to cut the cord, or kick you out of the nest. Get some copy/paste action going, add in a touch of google. I think you can take it from here and continue building on top of this project. View the project here: https://github.com/mweppler/the-video-store
+![Watch View](/img/for-posts/lets-build-a-sinatra-app/watch-view.png "Watch View")
+
+Wow that was a lot of work. Its time for another high five and commit! It's also time for me to cut the cord, or kick you out of the nest. Get some copy/paste action goingon, and add in a touch of google. I think you can take it from here and continue building on top of this project.
+
+You can double check your work with the project here: https://github.com/mweppler/the-video-store
