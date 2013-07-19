@@ -16,11 +16,11 @@ My setup is pretty simple, all my videos are stored on my time capsule. I have a
 
 So at this point you  might be saying “I thought this was a post about Sinatra?” or maybe I already lost a few of you. So before I lose any more of you, "Let's get the show on the road!".
 
-I have to make a few assumptions here in order to keep this a blog post. One is that know what Sinatra is. If you don't I'll borrow this brief quote from the http://sinatrarb.com website: "Sinatra is a DSL for quickly creating web applications in Ruby with minimal effort". The next assumption I am going to make is that you are already a developer and just want a quick jumpstart in building your first sinatra app. So you should already have ruby installed on your machine.
+I have to make a few assumptions here in order to keep this a blog post. One is that know what Sinatra is. If you don't I'll borrow this brief quote from the <a href="http://sinatrarb.com" target="_blank" title="Sinatra Site">Sinatra</a> site: "Sinatra is a DSL for quickly creating web applications in Ruby with minimal effort". The next assumption I am going to make is that you are already a developer and just want a quick jumpstart in building your first sinatra app. So you should already have ruby installed on your machine.
 
 I'll start by modeling the app a bit. For now just the basics. I am going to have a video object with fields like title, length, description, image & genre. I'll need a storage location. I’ll need a way to add this info about the video, upload the video, and watch it, especially on my iPad.
 
-A few things to note, I am developing and running this from my Mac. I believe everything should work just the same on Linux, though I'm not so sure about Windows. I will be using haml http://haml.info/ for the markup. So instead of having to type out this:
+A few things to note, I am developing and running this from my Mac. I believe everything should work just the same on Linux, though I'm not so sure about Windows. I will be using <a href="http://haml.info/" target="_blank" title="HAML Site">haml</a> for the markup. So instead of having to type out this:
 
 {% highlight html %}
 <section class=”container”>
@@ -42,7 +42,7 @@ we can just type this:
     = post.content
 {% endhighlight %}
 
-Time to kick things off, we need to open terminal and install a few things. If you're not comfortable on the commandline I'd suggest you read up on basics. You should still be able to follow along, but if your goal is to be a developer you should really have a basic understanding. If you have a few hours and about $24, a great resource is the "Meet the Command Line" videos over at http://peepcode.com
+Time to kick things off, we need to open terminal and install a few things. If you're not comfortable on the commandline I'd suggest you read up on basics. You should still be able to follow along, but if your goal is to be a developer you should really have a basic understanding. If you have a few hours and about $24, a great resource is the "Meet the Command Line" videos over at <a href="http://peepcode.com/" target="_blank" title="PeepCode">PeepCode</a>.
 
     https://peepcode.com/products/meet-the-command-line
     https://peepcode.com/products/advanced-command-line
@@ -76,7 +76,7 @@ You should now have the following structure:
 
     11 directories, 6 files
 
-Raise your hand if you know what a "Gemfile" is. Ok now put your hand down. Since I couldn't see if you had your hand raised or not I'll just assume you did and proceed with adding some gems to our Gemfile. Note: If you don't know what a gem file is you've got some more reading to do pal. Start here: http://bundler.io/
+Raise your hand if you know what a "Gemfile" is. Ok now put your hand down. Since I couldn't see if you had your hand raised or not I'll just assume you did and proceed with adding some gems to our Gemfile. Note: If you don't know what a gem file is you've got some more reading to do pal. Start by checking out the <a href="http://bundler.io/" target="_blank" title="Bundler Site">Bundler</a> site.
 
 {% highlight ruby %}
 source "https://rubygems.org"
@@ -292,7 +292,7 @@ All of our views will be inserted inside this layout with the yield statement. T
 
     bundle exec shotgun
 
-...and open http://localhost:9393/
+...and open <a href="http://localhost:9393/" target="_blank">http://localhost:9393/</a>
 
 This step is optional, but I think we should put the project under version control:
 
@@ -367,7 +367,7 @@ Before I go any further I'd like to add a touch of style to the video store. So 
 
     touch public/stylesheets/application.css
 
-I also was looking to try yahoos new css framework pure (http://purecss.io/) so lets do that now. So I am going to refactor the layout.haml file a bit:
+I also was looking to try <a href="http://purecss.io/" target="_blank" title="Yahoo! Pure">Yahoo! Pure</a> so lets do that now. So I am going to refactor the layout.haml file a bit:
 
 {% highlight ruby %}
 !!! 5
@@ -584,4 +584,4 @@ end
 
 Wow that was a lot of work. Its time for another high five and commit! It's also time for me to cut the cord, or kick you out of the nest. Get some copy/paste action goingon, and add in a touch of google. I think you can take it from here and continue building on top of this project.
 
-You can double check your work with the project here: https://github.com/mweppler/the-video-store
+You can double check your work with the project I have hosted on <a href="https://github.com/mweppler/the-video-store" target="_blank" title="The Video Store - on GitHub">github</a>
