@@ -1,7 +1,7 @@
-source:    .
-pygments:  true
-lsi:       false
-exclude:   [Gemfile, Gemfile.lock, Guardfile, Rakefile, README.md]
+source:   .
+pygments: true
+lsi:      false
+exclude:  [Gemfile, Gemfile.lock, Guardfile, Rakefile, README.md]
 
 copyright: "Copyright 2013 Matt Weppler | All Rights Reserved."
 
