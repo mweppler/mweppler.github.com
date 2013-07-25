@@ -10,13 +10,13 @@ title: Lets Build a Sinatra App
 
 # Lets Build a Sinatra App
 
-Normally when I think apple, I think: beauty, simplicity, it just works... You know, the same things that come to mind when anyone thinks of apple. I also love watching Seinfeld before I hit the sack. Its how I switch gears from mad coder to heavy sleeper.
+Lets talk a little bit about my motivation for this article. Frustration... Frustration with what you ask? Apple TV, AirPlay & watching videos from my library. Normally when I think apple, I think: beauty, simplicity, it just works... You know, the same things that come to mind when anyone thinks of apple. I also love watching Seinfeld before I hit the sack. Its how I switch gears from mad coder to heavy sleeper.
 
 My setup is pretty simple, all my videos are stored on my time capsule. I have a Mac mini with iTunes. I connect via my iPad that sits on my nightstand. Everything has been amazing, that is, until a few months ago. I don’t know what changed but one night I fired up the videos app on my iPad, and waited for it to find the Mac mini library. It didnt... So I get up, go to the Mac mini and make sure it is connected to the network and to the shared drive. Try again, it works. I’d keep running into the same issue every night though. I mean, what good is it if it doesn’t just work? amirite?
 
 So at this point you  might be saying “I thought this was a post about Sinatra?” or maybe I already lost a few of you. So before I lose any more of you, "Let's get the show on the road!".
 
-I have to make a few assumptions here in order to keep this a blog post. One is that know what Sinatra is. If you don't I'll borrow this brief quote from the <a href="http://sinatrarb.com" target="_blank" title="Sinatra Site">Sinatra</a> site: "Sinatra is a DSL for quickly creating web applications in Ruby with minimal effort". The next assumption I am going to make is that you are already a developer and just want a quick jumpstart in building your first sinatra app. So you should already have ruby installed on your machine.
+I have to make a few assumptions here in order to keep this a blog post. One is that you know what Sinatra is. If you don't I'll borrow this brief quote from the <a href="http://sinatrarb.com" target="_blank" title="Sinatra Site">Sinatra</a> site: "Sinatra is a DSL for quickly creating web applications in Ruby with minimal effort". The next assumption I am going to make is that you are already a developer and just want a quick jumpstart in building your first sinatra app. So you should already have ruby installed on your machine.
 
 I'll start by modeling the app a bit. For now just the basics. I am going to have a video object with fields like title, length, description, image & genre. I'll need a storage location. I’ll need a way to add this info about the video, upload the video, and watch it, especially on my iPad.
 
@@ -47,7 +47,7 @@ Time to kick things off, we need to open terminal and install a few things. If y
     https://peepcode.com/products/meet-the-command-line
     https://peepcode.com/products/advanced-command-line
 
-Now were going to put the app structure and basic setup in place. From a directory that makes sense (in my case I have a /Users/mweppler/developer/projects directory that I keep all my projects in) run the following:
+Now we're going to put the app structure and basic setup in place. From a directory that makes sense (in my case I have a /Users/mweppler/developer/projects directory that I keep all my projects in) run the following:
 
     mkdir -p the-video-store the-video-store/public the-video-store/public/images the-video-store/public/javascripts the-video-store/public/media/image the-video-store/public/media/video the-video-store/public/stylesheets the-video-store/views the-video-store/media/image the-video-store/media/video
 
@@ -97,7 +97,7 @@ gem 'sqlite3', '1.3.7'
 
     bundle install
 
-I want to get this basic app up and running quickly so we can iterate though the functionality. Normally I'd suggest you follow TDD/BDD practices but for something this basic I want to focus on sinatra. Add the following to your config.ru file:
+I want to get this basic app up and running quickly so we can iterate through the functionality. Normally I'd suggest you follow TDD/BDD practices but for something this basic I want to focus on sinatra. Add the following to your config.ru file:
 
 {% highlight ruby %}
 require 'rubygems'
@@ -434,7 +434,7 @@ Now lets clean up the upload form. Update the new.haml file with:
 
 ![New/Upload View](/img/for-posts/lets-build-a-sinatra-app/new-view.png "New/Upload View")
 
-Now that thats out of the way lets add a way to view videos that we've uploaded. In other words lets add a /video/list route in video_store.rb:
+Now that that's out of the way lets add a way to view videos that we've uploaded. In other words lets add a /video/list route in video_store.rb:
 
 {% highlight ruby %}
 get '/video/list' do
@@ -477,7 +477,7 @@ Make this list.haml view pretty:
 
 ![List View](/img/for-posts/lets-build-a-sinatra-app/list-view.png "List View")
 
-Ok, one last step. Lets add a way to get all the videos details as we'll as an option to watch it! So lets add the route in video_store.rb:
+Ok, one last step. Lets add a way to get all the video details as well as an option to watch them! So lets add the route in video_store.rb:
 
 {% highlight ruby %}
 get '/video/show/:id' do
@@ -582,6 +582,6 @@ end
 
 ![Watch View](/img/for-posts/lets-build-a-sinatra-app/watch-view.png "Watch View")
 
-Wow that was a lot of work. Its time for another high five and commit! It's also time for me to cut the cord, or kick you out of the nest. Get some copy/paste action goingon, and add in a touch of google. I think you can take it from here and continue building on top of this project.
+Wow that was a lot of work. Its time for another high five and commit! It's also time for me to cut the cord, or kick you out of the nest. Get some copy/paste action going on, and add in a touch of google. I think you can take it from here and continue building on top of this project.
 
 You can double check your work with the project I have hosted on <a href="https://github.com/mweppler/the-video-store" target="_blank" title="The Video Store - on GitHub">github</a>
