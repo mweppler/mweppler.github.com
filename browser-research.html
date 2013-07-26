@@ -9,6 +9,8 @@ title: Browser Research
 browser-vendors:
   - vendor: Apple
     name: Safari
+    browser-icons:
+      16x16: "/img/browser-logos/safari/safari_16x16.png"
     flags-settings: ""
     prefix: -webkit
     links:
@@ -24,6 +26,8 @@ browser-vendors:
           link: "http://support.apple.com/kb/dl1531"
   - vendor: Google
     name: Chrome
+    browser-icons:
+      16x16: "/img/browser-logos/chrome/chrome_16x16.png"
     flags-settings: "chrome://flags"
     prefix: -webkit
     links:
@@ -43,6 +47,8 @@ browser-vendors:
           link: "https://www.google.com/intl/en/chrome/browser/index.html#eula"
   - vendor: Microsoft
     name: Internet Explorer
+    browser-icons:
+      16x16: "/img/browser-logos/ie9-10/ie9-10_16x16.png"
     flags-settings: ""
     prefix: -ms
     links:
@@ -62,6 +68,8 @@ browser-vendors:
           link: "http://windows.microsoft.com/en-US/internet-explorer/download-ie"
   - vendor: Mozilla
     name: Firefox
+    browser-icons:
+      16x16: "/img/browser-logos/firefox/firefox_16x16.png"
     flags-settings: "about:config"
     prefix: -moz
     links:
@@ -79,6 +87,8 @@ browser-vendors:
           link: "https://download.mozilla.org/?product=firefox-22.0&os=win&lang=en-US"
   - vendor: Opera
     name: Opera
+    browser-icons:
+      16x16: "/img/browser-logos/opera/opera_16x16.png"
     flags-settings: ""
     prefix: -o
     links:
@@ -96,6 +106,7 @@ browser-vendors:
           link: "http://www.opera.com/download/get/?partner=www&opsys=MacOS"
         - platform: Windows
           link: "http://www.opera.com/download/get/?partner=www&opsys=Windows"
+
 rendering-engines:
   - browser: Chrome
     link: "http://en.wikipedia.org/wiki/Blink_(layout_engine)"
@@ -124,25 +135,16 @@ javascript-engines:
     name: SpiderMonkey & Rhino
   - browser: Internet Explorer
     link: "http://en.wikipedia.org/wiki/Chakra_(JScript_engine)"
+    alt-link: 
     name: Chakra
   - browser: Opera
     link: "http://en.wikipedia.org/wiki/Presto_(layout_engine)#ECMAScript_engines"
+    alt-link: 
     name: Carakan
   - browser: Safari
     link: "http://en.wikipedia.org/wiki/WebKit#JavaScriptCore"
+    alt-link: 
     name: JavaScriptCore (Nitro)
-
-useragents:
-  - browser: 
-    useragent:
-  - browser: 
-    useragent:
-  - browser: 
-    useragent:
-  - browser: 
-    useragent:
-  - browser: 
-    useragent:
 
 current-versions:
   - browser: ChromeFrame
@@ -169,11 +171,13 @@ current-versions:
         version: 28.0.1500.52
         type: Stable
       - platform: Mac OS X
-        version: 29.0.1548.0
+        version: 30.0.1576.0
         type: Canary
+        useragent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1576.0 Safari/537.36"
       - platform: Mac OS X
-        version: 29.0.1547.3
+        version: 30.0.1573.2
         type: Development
+        useragent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1573.2 Safari/537.36"
       - platform: Mac OS X
         version: 28.0.1500.52
         type: Beta
@@ -183,6 +187,7 @@ current-versions:
       - platform: Mac OS X
         version: 28.0.1485.0 (195393)
         type: Chromium/Dart
+        useragent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1485.0 (Dart) Safari/537.36"
       - platform: Windows
         version: 29.0.1547.2
         type: Canary
@@ -204,67 +209,57 @@ current-versions:
       - platform: ChromeOS
         version: 27.0.1453.116
         type: Stable
-      - platform: iOS
-        version: 28.0.1500.8
-        type: Beta
-      - platform: iOS
-        version: 27.0.1453.10
+      - platform: iOS 7 beta 3 (iPad mini)
+        version: 28.0.1500.12
         type: Stable
+        useragent: "Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) CriOS/28.0.1500.12 Mobile/11A4414e Safari/8536.25 (2E7F0504-5DC7-4478-8C48-FA67973C9FB9)"
+      - platform: iOS 7 beta 3 (iPhone 5)
+        version: 28.0.1500.12
+        type: Stable
+        useragent: "Mozilla/5.0 (iPhone; CPU iPhone OS 7_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) CriOS/28.0.1500.12 Mobile/11A4414e Safari/8536.25 (CE60DBD2-5A88-4FAF-B171-7139F031AA84)"
       - platform: Android
         version: 28.0.1500.37
         type: Beta
       - platform: Android
-        version: 27.0.1453.90
+        version: 28.0.1500.94
         type: Stable
+        useragent: "Mozilla/5.0 (Linux; Android 4.1.1; GT-P3113 Build/JRO03C) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.94 Safari/537.36"
     release-notes-link: 
   - browser: Firefox
     platforms:
       - platform: Firefox OS
         version: 22
         type: Release
+        useragent: ""
       - platform: Linux
         version: 22
         type: Release
+        useragent: ""
       - platform: Mac OS X
         version: 22
         type: Release
+        useragent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:22.0) Gecko/20100101 Firefox/22.0"
       - platform: Mac OS X
-        version: 22
+        version: 23
         type: Beta
+        useragent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:23.0) Gecko/20100101 Firefox/23.0"
       - platform: Mac OS X
-        version: 23.0a2 (2013-06-24)
+        version: 24.0a2 (2013-07-26)
         type: Aurora
+        useragent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:24.0) Gecko/20130726 Firefox/24.0"
       - platform: Mac OS X
         version: 25.0a1 (2013-06-26)
         type: Nightly
+        useragent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:25.0) Gecko/20130726 Firefox/25.0"
       - platform: Windows
         version: 22
         type: Release
+        useragent: "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:22.0) Gecko/20100101 Firefox/22.0"
       - platform: Android
         version: 22
         type: Release
+        useragent: "Mozilla/5.0 (Android; Tablet; rv:22.0) Gecko/22.0 Firefox/22.0"
     release-notes-link: "http://www.mozilla.org/en-US/mobile/22.0/releasenotes/"
-  - browser: Opera
-    platforms:
-      - platform: Mac OS X
-        version: 12.15.1748
-        type: Release
-      - platform: Windows
-        version: 12.15.1748
-        type: Release
-    release-notes-link: 
-  - browser: Safari
-    platforms:
-      - platform: Mac OS X
-        version: 6.0.5 (8536.30.1)
-        type: Release
-      - platform: Mac OS X
-        version: 
-        type: Nightly
-      - platform: Windows
-        version: 5.1.7 (7534.57.2)
-        type: Release
-    release-notes-link: 
   - browser: Internet Explorer
     platforms:
       - platform: Windows XP
@@ -276,6 +271,7 @@ current-versions:
       - platform: Windows 7
         version: 9.0.8112.16421
         type: Release
+        useragent: "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; InfoPath.3; .NET4.0E)"
       - platform: Windows 7
         version: 10
         type: Release
@@ -286,63 +282,104 @@ current-versions:
         version: 11
         type: Preview
     release-notes-link: 
-misc:
+  - browser: Opera
+    platforms:
+      - platform: Mac OS X
+        version: 12.16.1860
+        type: Release
+        useragent: "Opera/9.80 (Macintosh; Intel Mac OS X 10.8.4) Presto/2.12.388 Version/12.16"
+      - platform: Windows
+        version: 12.16.1860
+        type: Release
+        useragent: "Opera/9.80 (Windows NT 6.1; WOW64) Presto/2.12.388 Version/12.16"
+      - platform: Android
+        version: 15.0.1162.60140
+        type: Release
+        useragent: "Mozilla/5.0 (Linux; Android 4.1.1; GT-P3113 Build/JRO03C) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.63 Safari/537.36 OPR/15.0.1162.60140"
+    release-notes-link: 
+  - browser: Safari
+    platforms:
+      - platform: Mac OS X
+        version: 6.0.5 (8536.30.1)
+        type: Release
+        useragent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/536.30.1 (KHTML, like Gecko) Version/6.0.5 Safari/536.30.1"
+      - platform: Mac OS X
+        version: 6.0.5 (8536.30.1, 538+)
+        type: Nightly
+        useragent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/538.1+ (KHTML, like Gecko) Version/6.0.5 Safari/536.30.1"
+      - platform: Windows
+        version: 5.1.7 (7534.57.2)
+        type: Release
+        useragent: "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534.57.2 (KHTML, like Gecko) Version/5.1.7 Safari/534.57.2"
+      - platform: iOS 7 beta 3 (iPad mini)
+        version: 6.0
+        type: Beta
+        useragent: "Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.46 (KHTML, like Gecko) Version/6.0 Mobile/11A4414e Safari/8536.25"
+      - platform: iOS 7 beta 3 (iPhone 5)
+        version: 6.0
+        type: Beta
+        useragent: "Mozilla/5.0 (iPhone; CPU iPhone OS 7_0 like Mac OS X) AppleWebKit/537.46 (KHTML, like Gecko) Version/6.0 Mobile/11A4414e Safari/8536.25"
+    release-notes-link: 
+
+miscs:
   type:
-resource:
-  type: Standards
-  links:
-    - link: "http://en.wikipedia.org/wiki/World_Wide_Web_Consortium"
-      misc: 
-    - link: "http://en.wikipedia.org/wiki/Web_Hypertext_Application_Technology_Working_Group"
-      misc: 
-    - link: "http://en.wikipedia.org/wiki/Document_Object_Model"
-      misc: 
-  type: Browsers
-  links:
-    - link: "http://en.wikipedia.org/wiki/List_of_web_browsers"
-      misc: 
-    - link: "http://en.wikipedia.org/wiki/Comparison_of_web_browsers"
-      misc: 
-    - link: "http://en.wikipedia.org/wiki/Web_browser_history"
-      misc: 
-    - link: "http://www.nczonline.net/blog/2010/01/12/history-of-the-user-agent-string/"
-      misc: 
-    - link: "http://en.wikipedia.org/wiki/Comparison_of_layout_engines_(HTML5)"
-      misc: 
-    - link: "http://en.wikipedia.org/wiki/SunSpider_JavaScript_Benchmark#SunSpider"
-      misc: 
-    - link: "http://caniuse.com/"
-      misc: 
-    - link: "http://html5please.com/"
-      misc: 
-    - link: "http://css3please.com/"
-      misc: 
-  type: Protocols
-  links:
-    - link: "http://en.wikipedia.org/wiki/HTTP"
-      misc: 
-    - link: "http://en.wikipedia.org/wiki/HTTPS"
-      misc: 
-    - link: "http://en.wikipedia.org/wiki/SPDY"
-      misc: 
-    - link: "http://en.wikipedia.org/wiki/Transport_Layer_Security"
-      misc: 
-    - link: "http://en.wikipedia.org/wiki/Quirks_mode"
-      misc: 
-  type: ECMAScript
-  links:
-    - link: "http://en.wikipedia.org/wiki/ECMAscript"
-      misc: 
-    - link: "http://en.wikipedia.org/wiki/JavaScript"
-      misc: 
-    - link: "http://en.wikipedia.org/wiki/JScript"
-      misc: 
-    - link: "http://en.wikipedia.org/wiki/ActionScript"
-      misc: 
-    - link: "http://en.wikipedia.org/wiki/Acid3"
-      misc: 
-    - link: "http://acid3.acidtests.org/"
-      misc: 
+
+resources:
+  - type: Standards
+    links:
+      - link: "http://en.wikipedia.org/wiki/World_Wide_Web_Consortium"
+        misc: 
+      - link: "http://en.wikipedia.org/wiki/Web_Hypertext_Application_Technology_Working_Group"
+        misc: 
+      - link: "http://en.wikipedia.org/wiki/Document_Object_Model"
+        misc: 
+  - type: Browsers
+    links:
+      - link: "http://en.wikipedia.org/wiki/List_of_web_browsers"
+        misc: 
+      - link: "http://en.wikipedia.org/wiki/Comparison_of_web_browsers"
+        misc: 
+      - link: "http://en.wikipedia.org/wiki/Web_browser_history"
+        misc: 
+      - link: "http://www.nczonline.net/blog/2010/01/12/history-of-the-user-agent-string/"
+        misc: 
+      - link: "http://en.wikipedia.org/wiki/Comparison_of_layout_engines_(HTML5)"
+        misc: 
+      - link: "http://en.wikipedia.org/wiki/SunSpider_JavaScript_Benchmark#SunSpider"
+        misc: 
+      - link: "http://caniuse.com/"
+        misc: 
+      - link: "http://html5please.com/"
+        misc: 
+      - link: "http://css3please.com/"
+        misc: 
+  - type: Protocols
+    links:
+      - link: "http://en.wikipedia.org/wiki/HTTP"
+        misc: 
+      - link: "http://en.wikipedia.org/wiki/HTTPS"
+        misc: 
+      - link: "http://en.wikipedia.org/wiki/SPDY"
+        misc: 
+      - link: "http://en.wikipedia.org/wiki/Transport_Layer_Security"
+        misc: 
+      - link: "http://en.wikipedia.org/wiki/Quirks_mode"
+        misc: 
+  - type: ECMAScript
+    links:
+      - link: "http://en.wikipedia.org/wiki/ECMAscript"
+        misc: 
+      - link: "http://en.wikipedia.org/wiki/JavaScript"
+        misc: 
+      - link: "http://en.wikipedia.org/wiki/JScript"
+        misc: 
+      - link: "http://en.wikipedia.org/wiki/ActionScript"
+        misc: 
+      - link: "http://en.wikipedia.org/wiki/Acid3"
+        misc: 
+      - link: "http://acid3.acidtests.org/"
+        misc: 
+
 small-market-browsers:
   - label: Maxthon Cloud Browser
     link:  "http://www.maxthon.com/"
@@ -360,6 +397,9 @@ small-market-browsers:
     link:  "http://www.lunascape.tv/"
     desc:  "Available for: Android, iPad, iPhone, Mac (Coming soon), Windows"
 ---
+<style>
+  table { font-size: .8em; }
+</style>
 
 <h1>Browser Research</h1>
 
@@ -389,8 +429,8 @@ small-market-browsers:
     {% for browser in page.browser-vendors %}
       <tr>
         <td>{{ browser.vendor }}</td>
-        <td>{{ browser.name }}</td>
-        <td>{{ browser.flags-settings }}</td>
+        <td>{{ browser.name }} <img alt="Browser Icon" src="{{ browser.browser-icons.16x16 }}" title="Browser Icon" /></td>
+        <td><a href="{{ browser.flags-settings }}" target="_blank">{{ browser.flags-settings }}</a></td>
         <td>{{ browser.prefix }}</td>
         <td>
           <ul>
@@ -401,10 +441,8 @@ small-market-browsers:
         </td>
         <td>
           <ul>
-            {% for download in browser.downloads %}
-              {% for platform in download.platforms %}
-                <li><span>{{ platform.platform }}: </span><a href="{{ platform.link }}" target="_blank">{{ platform.link }}</a></li>
-              {% endfor %}
+            {% for platform in browser.downloads.platforms %}
+              <li><span>{{ platform.platform }}: </span><a href="{{ platform.link }}" target="_blank">{{ platform.link }}</a></li>
             {% endfor %}
           </ul>
         </td>
@@ -413,17 +451,192 @@ small-market-browsers:
   </tbody>
 </table>
 
-<h2>Browser Vendor Javascript Engine: </h2>
-<a href="http://en.wikipedia.org/wiki/JavaScript_engine">http://en.wikipedia.org/wiki/JavaScript_engine</a>
-{{}}
+<h2>Browser Rendering Engines: </h2>
+<table>
+  <thead>
+    <tr>
+      <th>Browser</th>
+      <th>Name</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tfoot>
+  <tbody>
+    {% for engine in page.rendering-engines %}
+      <tr>
+        <td>{{ engine.browser }}</td>
+        <td>{{ engine.name }}</td>
+        <td><a href="{{ engine.link }}" target="_blank">{{ engine.link }}</a></td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+
+<h2><a href="http://en.wikipedia.org/wiki/JavaScript_engine" target="_blank">Browser Javascript Engines</a></h2>
+<table>
+  <thead>
+    <tr>
+      <th>Browser</th>
+      <th>Name</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td></td>
+    </tr>
+  </tfoot>
+  <tbody>
+    {% for engine in page.javascript-engines %}
+      <tr>
+        <td>{{ engine.browser }}</td>
+        <td>{{ engine.name }}</td>
+        <td>
+          <ul>
+            <li><a href="{{ engine.link }}" target="_blank">{{ engine.link }}</a></li>
+            <li><a href="{{ engine.link }}" target="_blank">{{ engine.alt-link }}</a></li>
+          </ul>
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
 <h2>Browser Debugger Tools</h2>
-{{}}
-<h2>Browser User Agent: navigator.userAgent</h2>
-{{}}
+<table>
+  <thead>
+    <tr>
+      <th></th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td></td>
+    </tr>
+  </tfoot>
+  <tbody>
+    {% for debugger_tool in page.debugger-tools %}
+      <tr>
+        <td>{{ debugger_tool }}</td>
+      </tr>
+    {% endfor %}
+    </tr>
+  </tbody>
+</table>
+
 <h2>Browser Mobile Versions:</h2>
-{{}}
-<h2>Latest Browsers Versions</h2>
-{{}}
+<table>
+  <thead>
+    <tr>
+      <th></th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td></td>
+    </tr>
+  </tfoot>
+  <tbody>
+    {% for mobile_version in page.mobile-versions %}
+      <tr>
+        <td>{{ mobile_version }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<h2>Current Browsers Versions</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Browser</th>
+      <th>Platform</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td></td>
+    </tr>
+  </tfoot>
+  <tbody>
+    {% for current_version in page.current-versions %}
+      <tr>
+        <td>{{ current_version.browser }}</td>
+        <td>
+          <ul>
+            {% for platform in current_version.platforms %}
+              <li class="cv-platform-desc"><strong>{{ platform.platform }}: {{ platform.version }} ({{ platform.type }})</strong></li>
+              <li class="cv-platform-ua"><em>{{ platform.useragent }}</em></li>
+            {% endfor %}
+          </ul>
+        </td>
+      </tr>
+    {% endfor %}
+    </tr>
+  </tbody>
+</table>
+
+<h2>Resources</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Links</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td></td>
+    </tr>
+  </tfoot>
+  <tbody>
+    {% for resource in page.resources %}
+      <tr>
+        <td>{{ resource.type }}</td>
+        <td>
+          <ul>
+            {% for link in resource.links %}
+              <li><a href="{{ link.link }}" target="_blank">{{ link.link }}</a></li>
+              <li>{{ link.misc }}</li>
+            {% endfor %}
+          </ul>
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<h2>Small Market Browsers</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Browser</th>
+      <th>Link</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td></td>
+    </tr>
+  </tfoot>
+  <tbody>
+    {% for browser in page.small-market-browsers %}
+      <tr>
+        <td>{{ browser.label }}</td>
+        <td><a href="{{ browser.link }}" target="_blank">{{ browser.link }}</a></td>
+        <td>{{ browser.desc }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
 
 <h2>Misc</h2>
 <div>
@@ -438,15 +651,6 @@ Pretend to be a Win32 Machine:
   Value Win32
   </pre>
 </div>
-
-<h2>Resources</h2>
-{{}}
-
-<h2>Downloads</h2>
-{{}}
-
-<h2>Small Market Browsers</h2>
-{{}}
 
 <h2>Browser Tests</h2>
 <pre>
