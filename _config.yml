@@ -2,7 +2,7 @@
 exclude:   [Gemfile, Gemfile.lock, Guardfile, Rakefile, README.md]
 lsi:       false
 paginate:  5
-permalink: pretty
+#permalink: pretty
 pygments:  true
 source:    .
 
@@ -13,13 +13,13 @@ contact-info:
   email: matt@weppler.me
 
 navigation-header:
-  - href:  /
+  - href:  /index.html
     link:  Home
     local: true
-  - href:  /projects/
+  - href:  /projects.html
     link:  Projects
     local: true
-  - href:  /resume/
+  - href:  /resume.html
     link:  Resume
     local: true
 
