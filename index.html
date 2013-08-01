@@ -2,7 +2,7 @@
 layout: base
 meta-description: "Matt Wepplers' blog & portfolio"
 meta-keywords: |
- CSS, HTML, JavaScript, PHP, Ruby on Rails, Web Development, XML
+  Backend Development, CSS, CSS3, Frontend Development, HTML, HTM5, JavaScript, PHP, Ruby, Ruby on Rails, Web Development, XML
 social-links:
   - href: "https://coderwall.com/mweppler"
     link: Coderwall
@@ -21,8 +21,28 @@ title: Blog
 <div class="eleven columns alpha content">
   <h1>Hello, world!</h1>
   <p>I am a developer, and so can you!</p>
+  <br />
+
+  <div class="clearfix pager">
+    {% if paginator.previous_page %}
+      {% if paginator.previous_page == 1 %}
+        <a href="/" class="pager-nav previous">Previous</a>
+      {% else %}
+        <a href="/page{{ paginator.previous_page }}" class="pager-nav previous">Previous</a>
+      {% endif %}
+    {% else %}
+      <span class="pager-nav previous">Previous</span>
+    {% endif %}
+    <span class="page_number ">page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    {% if paginator.next_page %}
+      <a href="/page{{ paginator.next_page }}" class="next pager-nav">Next</a>
+    {% else %}
+      <span class="next pager-nav">Next</span>
+    {% endif %}
+  </div>
   <hr />
-  {% for post in site.posts %}
+
+  {% for post in paginator.posts %}
     <article class="post type-post format-standard clearfix">
       <div class="three columns alpha meta">
         <ul>
@@ -39,6 +59,25 @@ title: Blog
       </div>
     </article>
   {% endfor %}
+
+  <br />
+  <div class="clearfix pager">
+    {% if paginator.previous_page %}
+      {% if paginator.previous_page == 1 %}
+        <a href="/" class="pager-nav previous">Previous</a>
+      {% else %}
+        <a href="/page{{ paginator.previous_page }}" class="pager-nav previous">Previous</a>
+      {% endif %}
+    {% else %}
+      <span class="pager-nav previous">Previous</span>
+    {% endif %}
+    <span class="page_number ">page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    {% if paginator.next_page %}
+      <a href="/page{{ paginator.next_page }}" class="next pager-nav">Next</a>
+    {% else %}
+      <span class="next pager-nav">Next</span>
+    {% endif %}
+  </div>
 </div><!--/span-->
 
 <aside class="five columns omega sidebar">

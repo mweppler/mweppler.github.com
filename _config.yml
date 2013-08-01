@@ -1,8 +1,11 @@
-source:   .
-pygments: true
-lsi:      false
+# Jekyll config
 exclude:  [Gemfile, Gemfile.lock, Guardfile, Rakefile, README.md]
+lsi:      false
+paginate: 5
+pygments: true
+source:   .
 
+# site specific
 copyright: "Copyright 2013 Matt Weppler | All Rights Reserved."
 
 contact-info:
