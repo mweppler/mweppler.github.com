@@ -1,9 +1,10 @@
 # Jekyll config
-exclude:  [Gemfile, Gemfile.lock, Guardfile, Rakefile, README.md]
-lsi:      false
-paginate: 5
-pygments: true
-source:   .
+exclude:   [Gemfile, Gemfile.lock, Guardfile, Rakefile, README.md]
+lsi:       false
+paginate:  5
+permalink: pretty
+pygments:  true
+source:    .
 
 # site specific
 copyright: "Copyright 2013 Matt Weppler | All Rights Reserved."
@@ -12,14 +13,14 @@ contact-info:
   email: matt@weppler.me
 
 navigation-header:
-  - href:  /index.html
-    link: Home
+  - href:  /
+    link:  Home
     local: true
-  - href:  /projects.html
-    link: Projects
+  - href:  /projects/
+    link:  Projects
     local: true
-  - href:  /resume.html
-    link: Resume
+  - href:  /resume/
+    link:  Resume
     local: true
 
 navigation-footer:
