@@ -7,13 +7,19 @@
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>http://matt.weppler.me/projects/</loc>
+    <loc>http://matt.weppler.me/index.html</loc>
     <lastmod>2013-08-01T01:01:38+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>http://matt.weppler.me/resume/</loc>
+    <loc>http://matt.weppler.me/projects.html</loc>
+    <lastmod>2013-08-01T01:01:38+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>http://matt.weppler.me/resume.html</loc>
     <lastmod>2013-08-01T01:01:38+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
@@ -25,19 +31,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>http://matt.weppler.me/2013/07/31/the-box-model/</loc>
+    <loc>http://matt.weppler.me/2013/07/31/the-box-model.html</loc>
     <lastmod>2013-08-01T01:01:38+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>http://matt.weppler.me/2013/07/19/lets-build-a-sinatra-app/</loc>
+    <loc>http://matt.weppler.me/2013/07/19/lets-build-a-sinatra-app.html</loc>
     <lastmod>2013-08-01T01:01:38+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>http://matt.weppler.me/2013/06/30/summer-project-breakout-with-javascript/</loc>
+    <loc>http://matt.weppler.me/2013/06/30/summer-project-breakout-with-javascript.html</loc>
     <lastmod>2013-08-01T01:01:38+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
@@ -49,7 +55,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>http://matt.weppler.me/2013/06/12/ios7-enterprise-wifi-issue/</loc>
+    <loc>http://matt.weppler.me/2013/06/12/ios7-enterprise-wifi-issue.html</loc>
     <lastmod>2013-08-01T01:01:38+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
@@ -61,31 +67,31 @@
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>http://matt.weppler.me/2013/05/30/lost-iphone-buddhist-bum/</loc>
+    <loc>http://matt.weppler.me/2013/05/30/lost-iphone-buddhist-bum.html</loc>
     <lastmod>2013-08-01T01:01:38+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>http://matt.weppler.me/2013/05/26/static-site-workflow-rwd/</loc>
+    <loc>http://matt.weppler.me/2013/05/26/static-site-workflow-rwd.html</loc>
     <lastmod>2013-08-01T01:01:38+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>http://matt.weppler.me/2013/05/13/moving-web-nv-forward/</loc>
+    <loc>http://matt.weppler.me/2013/05/13/moving-web-nv-forward.html</loc>
     <lastmod>2013-08-01T01:01:38+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>http://matt.weppler.me/2013/05/06/reflecting-on-time-spent-on-gtc/</loc>
+    <loc>http://matt.weppler.me/2013/05/06/reflecting-on-time-spent-on-gtc.html</loc>
     <lastmod>2013-08-01T01:01:38+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>http://matt.weppler.me/2013/03/02/createyourproglang/</loc>
+    <loc>http://matt.weppler.me/2013/03/02/createyourproglang.html</loc>
     <lastmod>2013-08-01T01:01:38+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
@@ -97,43 +103,43 @@
     <priority>0.51</priority>
   </url>
   <url>
-    <loc>http://matt.weppler.me/2011/05/20/rhino-javascript-engine/</loc>
+    <loc>http://matt.weppler.me/2011/05/20/rhino-javascript-engine.html</loc>
     <lastmod>2013-08-01T01:01:38+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.51</priority>
   </url>
   <url>
-    <loc>http://matt.weppler.me/2011/05/17/triangle-numbers-puzzle/</loc>
+    <loc>http://matt.weppler.me/2011/05/17/triangle-numbers-puzzle.html</loc>
     <lastmod>2013-08-01T01:01:38+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.51</priority>
   </url>
   <url>
-    <loc>http://matt.weppler.me/2011/05/16/vidarr-a-silence-alram-for-os-x/</loc>
+    <loc>http://matt.weppler.me/2011/05/16/vidarr-a-silence-alram-for-os-x.html</loc>
     <lastmod>2013-08-01T01:01:38+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.51</priority>
   </url>
   <url>
-    <loc>http://matt.weppler.me/2011/05/13/what-is-html5/</loc>
+    <loc>http://matt.weppler.me/2011/05/13/what-is-html5.html</loc>
     <lastmod>2013-08-01T01:01:38+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.51</priority>
   </url>
   <url>
-    <loc>http://matt.weppler.me/2011/04/06/drupal-http-error-0-when-uploading-files/</loc>
+    <loc>http://matt.weppler.me/2011/04/06/drupal-http-error-0-when-uploading-files.html</loc>
     <lastmod>2013-08-01T01:01:38+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.51</priority>
   </url>
   <url>
-    <loc>http://matt.weppler.me/2011/01/30/self-extracting-jar-application/</loc>
+    <loc>http://matt.weppler.me/2011/01/30/self-extracting-jar-application.html</loc>
     <lastmod>2013-08-01T01:01:38+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.41</priority>
   </url>
   <url>
-    <loc>http://matt.weppler.me/2011/01/30/recursion/</loc>
+    <loc>http://matt.weppler.me/2011/01/30/recursion.html</loc>
     <lastmod>2013-08-01T01:01:38+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.41</priority>
