@@ -27,7 +27,19 @@
   <url>
     <loc>http://matt.weppler.me/page2/</loc>
     <lastmod>2013-08-01T01:01:38+00:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>http://matt.weppler.me/page3/</loc>
+    <lastmod>2013-08-01T01:01:38+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>http://matt.weppler.me/page4/</loc>
+    <lastmod>2013-08-01T01:01:38+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
@@ -61,12 +73,6 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>http://matt.weppler.me/page3/</loc>
-    <lastmod>2013-08-01T01:01:38+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.64</priority>
-  </url>
-  <url>
     <loc>http://matt.weppler.me/2013/05/30/lost-iphone-buddhist-bum.html</loc>
     <lastmod>2013-08-01T01:01:38+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -95,12 +101,6 @@
     <lastmod>2013-08-01T01:01:38+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>http://matt.weppler.me/page4/</loc>
-    <lastmod>2013-08-01T01:01:38+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.51</priority>
   </url>
   <url>
     <loc>http://matt.weppler.me/2011/05/20/rhino-javascript-engine.html</loc>
