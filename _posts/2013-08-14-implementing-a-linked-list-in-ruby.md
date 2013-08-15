@@ -74,7 +74,7 @@ class Node
 end
 {% endhighlight %}
 
-I forgot to mention that it will be a recursive method (see my artical on the topic of <a href="http://matt.weppler.me/2011/01/30/recursion.html" target="_blank" title="Previous post on Recursion">Recursion</a>). You'll need to quit `irb` and require the ruby script again. Then create a few node instances and link them together via the nodes next property. Once you've completed that go ahead and call the Node class method node_list.
+I forgot to mention that it will be a recursive method (see my article on the topic of <a href="http://matt.weppler.me/2011/01/30/recursion.html" target="_blank" title="Previous post on Recursion">Recursion</a>). You'll need to quit `irb` and require the ruby script again. Then create a few node instances and link them together via the nodes next property. Once you've completed that go ahead and call the Node class method node_list.
 
 {% highlight ruby %}
 irb(main):009:0> puts Node.node_list node
