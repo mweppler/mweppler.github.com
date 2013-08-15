@@ -10,6 +10,9 @@ title: Lets Build a Sinatra App
 
 # Lets Build a Sinatra App
 
+
+<a href="http://rubyweekly.com/archive/156.html" target="_blank" title="Issue #156 of Ruby Weekly">Featured in issue #156 of Ruby Weekly.</a>
+
 Lets talk a little bit about my motivation for this article. Frustration... Frustration with what you ask? Apple TV, AirPlay & watching videos from my library. Normally when I think apple, I think: beauty, simplicity, it just works... You know, the same things that come to mind when anyone thinks of apple. I also love watching Seinfeld before I hit the sack. Its how I switch gears from mad coder to heavy sleeper.
 
 My setup is pretty simple, all my videos are stored on my time capsule. I have a Mac mini with iTunes. I connect via my iPad that sits on my nightstand. Everything has been amazing, that is, until a few months ago. I don’t know what changed but one night I fired up the videos app on my iPad, and waited for it to find the Mac mini library. It didnt... So I get up, go to the Mac mini and make sure it is connected to the network and to the shared drive. Try again, it works. I’d keep running into the same issue every night though. I mean, what good is it if it doesn’t just work? amirite?
