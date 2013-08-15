@@ -5,20 +5,21 @@ header {
 }
 
 .avatar {
-  display: inline-block;
-  margin: 10px;
+  background-color: white;
   border-radius: 50px;
-  width: 80px;
+  display: inline-block;
+  float: left;
+  margin: 10px;
   overflow: hidden;
   padding: 5px;
-  background-color: white;
+  width: 80px;
 }
 .avatar img {
   border-radius: 50px;
 }
 
 .name {
-  display: inline;
+  padding-top: 14px;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
@@ -33,6 +34,12 @@ header {
   dd {
     margin: 0;
     padding: 0;
+  }
+  .name {
+    clear: left;
+    display: block;
+    margin-bottom: 0;
+    padding-top: 0;
   }
   .youtube-video { height: 160px; width: 320px; }
 }
@@ -49,6 +56,11 @@ header {
 
   dd {
     width: 600px;
+  }
+  .name {
+    clear: left;
+    display: block;
+    padding-top: 0;
   }
   .youtube-video { height: 320px; width: 640px; }
 }

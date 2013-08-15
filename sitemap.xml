@@ -26,20 +26,26 @@
   </url>
   <url>
     <loc>http://matt.weppler.me/page2/</loc>
-    <lastmod>2013-08-01T01:01:38+00:00</lastmod>
+    <lastmod>2013-08-14T01:01:38+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>http://matt.weppler.me/page3/</loc>
-    <lastmod>2013-08-01T01:01:38+00:00</lastmod>
+    <lastmod>2013-08-14T01:01:38+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>http://matt.weppler.me/page4/</loc>
-    <lastmod>2013-08-01T01:01:38+00:00</lastmod>
+    <lastmod>2013-08-14T01:01:38+00:00</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>http://matt.weppler.me/2013/08/14/implementing-a-linked-list-in-ruby.html</loc>
+    <lastmod>2013-08-14T10:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
