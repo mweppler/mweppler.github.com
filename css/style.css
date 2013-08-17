@@ -2184,7 +2184,15 @@ header {
   border-radius: 50px;
 }
 .name {
-  padding-top: 14px;
+  color: #333;
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+  padding-top: 30px;
+  text-decoration: none;
+}
+.name :hover {
+  color: #2481ff;
 }
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   dt {
