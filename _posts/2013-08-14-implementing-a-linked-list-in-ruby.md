@@ -82,7 +82,7 @@ Oh Hai -> How are you? -> ...good, glad to hear it!
 => nil
 {% endhighlight %}
 
-You should see _node_ followed `->` followed by another _node_. Great so we have a linked list in Ruby. Now what? Well I actually was working on a code challenge where I had to reverse a linked list in Ruby. Honestly, I had a hard time with this. So much so that I started tearing tiny pieces of paper, labeling them and organizing them to figure out an algorithm.
+You should see _node_ followed by `->` followed by another _node_. Great so we have a linked list in Ruby. Now what? Well I actually was working on a code challenge where I had to reverse a linked list in Ruby. Honestly, I had a hard time with this. So much so that I started tearing tiny pieces of paper, labeling them and organizing them to figure out an algorithm.
 
 ![Paper Data Structures](/img/for-posts/implementing-a-linked-list-in-ruby/paper-data-structures.jpg "Paper Data Structures")
 
