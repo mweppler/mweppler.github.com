@@ -25,7 +25,7 @@ class Node
 end
 {% endhighlight %}
 
-Simple enough huh? Lets instantiate a few. I am going to use `irb` here so if you want to follow along now is the time to open your terminal and launch `irb` from the command prompt.
+Simple enough huh? Lets instantiate a few. I am going to use _irb_ here so if you want to follow along now is the time to open your terminal and launch _irb_ from the command prompt.
 
 {% highlight ruby %}
 irb(main):001:0> require './linked-list.rb'
@@ -74,7 +74,7 @@ class Node
 end
 {% endhighlight %}
 
-I forgot to mention that it will be a recursive method (see my article on the topic of <a href="http://matt.weppler.me/2011/01/30/recursion.html" target="_blank" title="Previous post on Recursion">Recursion</a>). You'll need to quit `irb` and require the ruby script again. Then create a few node instances and link them together via the nodes next property. Once you've completed that go ahead and call the Node class method node_list.
+I forgot to mention that it will be a recursive method (see my article on the topic of <a href="http://matt.weppler.me/2011/01/30/recursion.html" target="_blank" title="Previous post on Recursion">Recursion</a>). You'll need to quit _irb_ and require the ruby script again. Then create a few node instances and link them together via the nodes next property. Once you've completed that go ahead and call the Node class method node_list.
 
 {% highlight ruby %}
 irb(main):009:0> puts Node.node_list node
@@ -82,7 +82,7 @@ Oh Hai -> How are you? -> ...good, glad to hear it!
 => nil
 {% endhighlight %}
 
-You should see _node_ followed by `->` followed by another _node_. Great so we have a linked list in Ruby. Now what? Well I actually was working on a code challenge where I had to reverse a linked list in Ruby. Honestly, I had a hard time with this. So much so that I started tearing tiny pieces of paper, labeling them and organizing them to figure out an algorithm.
+You should see _node_ followed by _->_ followed by another _node_. Great so we have a linked list in Ruby. Now what? Well I actually was working on a code challenge where I had to reverse a linked list in Ruby. Honestly, I had a hard time with this. So much so that I started tearing tiny pieces of paper, labeling them and organizing them to figure out an algorithm.
 
 ![Paper Data Structures](/img/for-posts/implementing-a-linked-list-in-ruby/paper-data-structures.jpg "Paper Data Structures")
 
@@ -136,7 +136,12 @@ puts Node.node_list Node.reverse(node_1)
 
 ![Call the reverse method](/img/for-posts/implementing-a-linked-list-in-ruby/call-the-reverse-method.png "Call the reverse method")
 
-So inside the reverse method again we check to see if node.next is nil. Next we create three local variables swap, head & link. We set swap to node which is currently pointed at node_1, head to node.next which is currently pointing at node_2, node.next to nil this breaks the node_1 has to node_2 and points it at nil & link to head.next which is pointing at node_3.
+So inside the reverse method again we check to see if __node.next__ is nil. Next we create three local variables __swap__, __head__ & __link__. We set:  
+* __swap__ to __node__ which is currently pointed at __node_1__  
+* __head__ to __node.next__ which is currently pointing at __node_2__  
+* __node.next__ to nil  
+  * this breaks the link __node_1__ has to __node_2__ and points it at nil  
+* __link__ to __head.next__ which is pointing at __node_3__  
 
 {% highlight ruby %}
 return node if node.next.nil?
@@ -147,7 +152,11 @@ link = head.next
 
 ![Reverse method setup](/img/for-posts/implementing-a-linked-list-in-ruby/reverse-method-setup.png "Reverse method setup")
 
-...now in the while loop we begin actually reversing the linked list. We set head.next to swap which is pointing at node_1, swap to head which is pointing at node_2, head to link which is pointing at node_3 & link to link.next which is pointing at node_4.
+Now in the while loop we begin actually reversing the linked list. We set:  
+* __head.next__ to __swap__ which is pointing at __node_1__
+* __swap__ to __head__ which is pointing at __node_2__
+* __head__ to __link__ which is pointing at __node_3__
+* __link__ to __link.next__ which is pointing at __node_4__.
 
 {% highlight ruby %}
 while link != nil
@@ -176,7 +185,17 @@ irb(main):018:0> puts Node.node_list node_4
 => 4
 {% endhighlight %}
 
-In human words, node_1's link is broken/nil, node_2 links to node_1, node_3 links to node_4 & node_4's link is broken/nil. Lets loop again since link is not nil (its pointing to node_4). We set head.next to swap which is pointing at node_2, swap to head which is pointing at node_3, head to link which is pointing at node_4 & link to link.next which is pointing at nil.
+(in human words please)  
+* __node_1__'s link is broken/nil  
+* __node_2__ links to __node_1__  
+* __node_3__ links to __node_4__  
+* __node_4__'s link is broken/nil  
+
+Lets loop again since link is not nil (its pointing to __node_4__). We set:  
+* __head.next__ to __swap__ which is pointing at __node_2__  
+* __swap__ to __head__ which is pointing at __node_3__  
+* __head__ to __link__ which is pointing at __node_4__  
+* __link__ to __link.next__ which is pointing at nil  
 
 {% highlight ruby %}
 irb(main):017:0> puts Node.node_list node_1
@@ -194,7 +213,7 @@ irb(main):018:0> puts Node.node_list node_4
 
 ![Second time through the loop](/img/for-posts/implementing-a-linked-list-in-ruby/second-time-through-the-loop.png "Second time through the loop")
 
-Lets loop again? No, link is nil so instead we do our final swap and return head.
+Lets loop again? No, link is nil so instead we do our final __swap__ and return __head__.
 
 {% highlight ruby %}
 head.next = swap
@@ -217,7 +236,7 @@ irb(main):018:0> puts Node.node_list node_4
 
 ![Final swap and return](/img/for-posts/implementing-a-linked-list-in-ruby/final-swap-and-return.png "Final swap and return")
 
-Here is the complete code for my linked list implementation. If you have any improvments let me know.
+Here is the complete code for my linked list implementation. If you have any improvements don't hesitate to let me know. Feedback/comments are always welcome!
 
 {% highlight ruby %}
 class Node
