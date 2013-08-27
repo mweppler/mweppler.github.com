@@ -1,5 +1,5 @@
 <div class="pull-right social-widgets">
-  <div id="facebook-like-button" class="" style="float: left;">
+  <div id="google-plus-button" class="" style="float: left;">
     <!-- Place this tag where you want the +1 button to render. -->
     <div class="g-plusone" data-size="medium"></div>
     <script type="text/javascript">
@@ -17,7 +17,7 @@
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
   </div>
 
-  <div id="google-plus-button" class="" style="float: left;">
+  <div id="facebook-like-button" class="" style="float: left;">
     <!-- Facebook -->
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
@@ -27,7 +27,7 @@
       js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-    <div class="fb-like" data-href="http://developers.facebook.com/docs/reference/plugins/like" data-width="90" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+    <div class="fb-like" data-href="{{ site.base-url }}{{ page.url }}" data-width="90" data-layout="button_count" data-show-faces="false" data-send="false"></div>
   </div>
 
 </div>
