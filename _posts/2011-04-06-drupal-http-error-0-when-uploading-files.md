@@ -1,9 +1,10 @@
 ---
 layout: post
 meta-description:
-meta-keywords:
+meta-keywords: drupal, php
 preview: |
   Ran into this issue today with a site I am developing. Read through a lot of posts, on a lot of different sites. Steps I’ve tried include
+tags: [drupal]
 title: Drupal – HTTP Error 0 when uploading files
 ---
 # Drupal – HTTP Error 0 when uploading files

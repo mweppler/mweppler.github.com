@@ -4,6 +4,7 @@ meta-description:
 meta-keywords:
 preview: |
   I am growing more and more interested in Algorithms, and with algorithms comes Recursion or so im finding. I found source for Factorial.java and broke it down visually.
+tags: [recursion, java]
 title: Recursion (via Factorial)
 ---
 # Recursion (via Factorial)

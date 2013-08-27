@@ -5,6 +5,7 @@ meta-keywords: sinatra, haml, datamapper
 preview: |
   So at this point you  might be saying “I thought this was a post about Sinatra?” or maybe I already lost a few of you. So before I lose any more of you, "Let's get the [[show]] on the road!".
 syntax-highlighting: true
+tags: [ruby, haml, sass, sinatra]
 title: Lets Build a Sinatra App
 ---
 

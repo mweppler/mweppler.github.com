@@ -2183,6 +2183,9 @@ header {
 .avatar img {
   border-radius: 50px;
 }
+.call-to-action.signup {
+  padding: 5px 10px 10px;
+}
 .name {
   color: #333;
   display: block;

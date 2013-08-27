@@ -5,6 +5,7 @@ meta-keywords: html, css, the box model
 preview: |
   When the browser renders a page, it creates a rectangular box for each DOM element. This box is made up of the content (image, text, video, etc...)
 syntax-highlighting: true
+tags: [html, css, the box model]
 title: The Box Model
 ---
 

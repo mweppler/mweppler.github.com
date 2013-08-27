@@ -5,6 +5,7 @@ meta-keywords: code reviews, ruby
 preview: |
   I think code reviews can be great. I love learning from my mistakes as well as being challenged for my technical decisions. Code reviews provide this. Unfortunately it doesn't happen nearly as much as I'd like.
 syntax-highlighting: true
+tags: [code review, ruby]
 title: Code Reviews with Exercism
 ---
 

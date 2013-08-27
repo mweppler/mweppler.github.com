@@ -1,9 +1,10 @@
 ---
 layout: post
 meta-description:
-meta-keywords: self extracting jar
+meta-keywords: self extracting jar, encryption, project, java
 preview: |
   About a year ago, a client of mine needed to send sensitive files over the internet. They wanted something simple enough that the recipient wouldn't need any special software installed to access the files.
+tags: [encryption, project, java]
 title: Self Extracting Jar Application
 ---
 # Self Extracting Jar Application

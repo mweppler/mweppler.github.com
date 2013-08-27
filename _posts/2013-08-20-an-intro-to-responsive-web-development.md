@@ -5,6 +5,7 @@ meta-keywords: responsive web design, responsive web development, fixed layout, 
 preview: |
   Ok, lets recap. We created a grid composed of fixed values to serve as our baseline. This made it easier to convert to a fluid grid using the target / context rule.
 syntax-highlighting: true
+tags: [html, css3, responsive web design, responsive web development]
 title: An Intro to Responsive Web Development
 ---
 

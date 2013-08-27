@@ -5,6 +5,7 @@ meta-keywords: algorithms, linked list, objects, recursion, ruby
 preview: |
   I am learning… actually relearning since I used these things in another life. So let me take a shot at a brief explanition. You should definitly take a look at the Wikipedia - Linked List article, though as they do a much better job of describing it than I do.
 syntax-highlighting: true
+tags: [ruby, linked list]
 title: Implementing a Linked List in Ruby
 ---
 

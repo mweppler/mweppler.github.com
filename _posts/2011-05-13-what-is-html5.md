@@ -4,6 +4,7 @@ meta-description:
 meta-keywords:
 preview: |
   What most people think about when they hear HTML5 are rainbows and fairy dust, the ability to sprinkle a little jQuery on your page and magically transform it into a time machine.
+tags: [html5, html]
 title: What is HTML 5?
 ---
 # What is HTML 5?

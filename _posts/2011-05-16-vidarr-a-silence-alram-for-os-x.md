@@ -4,6 +4,7 @@ meta-description:
 meta-keywords:
 preview: |
   I just started working on Vidarr, a silence alarm for Mac OS X users. Its an open source project hosted on code.google.com check it out
+tags: [project, java]
 title: Vidarr – A Silence Alarm for OS X
 ---
 # Vidarr – A Silence Alarm for OS X
