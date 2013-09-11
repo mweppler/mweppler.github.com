@@ -1,0 +1,24 @@
+<header>
+  <div class="container">
+    <div class="six columns">
+      <div class="avatar">
+        <img src="http://www.gravatar.com/avatar/82352211032f783c81a2954d160d321a" />
+      </div>
+      <a class="name" href="/index.html">Matt Weppler</a>
+    </div>
+
+    <div class="ten columns">
+      <nav class="menu">
+        <ul>
+          {% for nav_item in site.navigation-header %}
+            {% assign current = nil %}
+            {% if page.url == nav_item.href %} {% assign current = 'current-menu-item' %} {% endif %}
+            <li class="{% unless current.nil? %} {{ current }} {% endunless %}">
+              <a href="{{ nav_item.href }}" {% unless nav_item.local %} target="_blank" {% endunless %}>{{ nav_item.link }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav><!-- /menu -->
+    </div>
+  </div>
+</header>

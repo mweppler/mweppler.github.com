@@ -1,0 +1,38 @@
+<footer>
+  <div class="container">
+    <div class="one-third column widget text">
+      <h3>About.</h3>
+      <p>I don't need pats on the back. I don't need compliments. The merit of my work is endorsed by what I see in the browser...</p>
+    </div>
+
+    <div class="one-third column widget list">
+      <h3>From the blog:</h3>
+      <ul>
+        {% for post in site.posts | limit:4 %}
+          <li><a href="{{ post.url }}">{{ post.date | date: "%m/%d"}} - {{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="one-third column twitter">
+      <h3>Tweets:</h3>
+      <ul id="tweets"></ul>
+    </div>
+
+  </div><!-- /container -->
+
+  <div class="footer_bottom">
+    <div class="container">
+      <div class="sixteen columns">
+        <p class="eight columns alpha">{{ site.copyright }}</p>
+        <div class="eight columns omega social-buttons">
+          {% for nav_item in site.navigation-footer %}
+            <a href="{{ nav_item.href }}" {% if nav_item.extra != '' %} {{ nav_item.extra }} {% endif %} {% unless nav_item.local %} target="_blank" {% endunless %}>
+              <i class="{{ nav_item.class }}"></i>
+            </a>
+          {% endfor %}
+          <!-- <a href="#"><i class="icon-rss"></i></a> -->
+      </div>
+    </div>
+  </div>
+</footer>
