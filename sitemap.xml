@@ -6,158 +6,176 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>http://matt.weppler.me/</loc>
-  <lastmod>2013-08-23T04:46:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-03-09T18:53:36+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>http://matt.weppler.me/index.html</loc>
+  <lastmod>2014-03-09T18:53:36+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>http://matt.weppler.me/projects.html</loc>
-  <lastmod>2013-08-23T04:46:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-03-09T18:53:36+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://matt.weppler.me/resume.html</loc>
-  <lastmod>2013-08-23T04:46:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-03-09T18:53:36+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://matt.weppler.me/page2/</loc>
-  <lastmod>2013-08-23T04:46:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-03-09T18:53:36+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://matt.weppler.me/2014/03/08/custom_source_control.html</loc>
+  <lastmod>2014-03-09T18:53:36+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://matt.weppler.me/2013/08/23/code-review-with-exercism.html</loc>
-  <lastmod>2013-08-23T04:46:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-03-09T18:53:36+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://matt.weppler.me/2013/08/20/an-intro-to-responsive-web-development.html</loc>
-  <lastmod>2013-08-23T04:46:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-03-09T18:53:36+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://matt.weppler.me/2013/08/14/implementing-a-linked-list-in-ruby.html</loc>
-  <lastmod>2013-08-23T04:46:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-03-09T18:53:36+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://matt.weppler.me/2013/07/31/the-box-model.html</loc>
-  <lastmod>2013-08-23T04:46:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://matt.weppler.me/2013/07/19/lets-build-a-sinatra-app.html</loc>
-  <lastmod>2013-08-23T04:46:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-03-09T18:53:36+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://matt.weppler.me/page3/</loc>
-  <lastmod>2013-08-23T04:46:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-03-09T18:53:36+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://matt.weppler.me/2013/07/19/lets-build-a-sinatra-app.html</loc>
+  <lastmod>2014-03-09T18:53:36+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://matt.weppler.me/2013/06/30/summer-project-breakout-with-javascript.html</loc>
-  <lastmod>2013-08-23T04:46:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-03-09T18:53:36+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://matt.weppler.me/2013/06/23/optimizing-shield-part-1.html</loc>
-  <lastmod>2013-08-23T04:46:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-03-09T18:53:36+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://matt.weppler.me/2013/06/12/ios7-enterprise-wifi-issue.html</loc>
-  <lastmod>2013-08-23T04:46:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-03-09T18:53:36+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://matt.weppler.me/2013/05/30/lost-iphone-buddhist-bum.html</loc>
-  <lastmod>2013-08-23T04:46:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://matt.weppler.me/2013/05/26/static-site-workflow-rwd.html</loc>
-  <lastmod>2013-08-23T04:46:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-03-09T18:53:36+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://matt.weppler.me/2011/01/30/recursion.html</loc>
-  <lastmod>2013-08-23T04:46:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-03-09T18:53:36+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://matt.weppler.me/page4/</loc>
-  <lastmod>2013-08-23T04:46:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-03-09T18:53:36+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://matt.weppler.me/2013/05/26/static-site-workflow-rwd.html</loc>
+  <lastmod>2014-03-09T18:53:36+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>http://matt.weppler.me/2013/05/13/moving-web-nv-forward.html</loc>
-  <lastmod>2013-08-23T04:46:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-03-09T18:53:36+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>http://matt.weppler.me/2013/05/06/reflecting-on-time-spent-on-gtc.html</loc>
-  <lastmod>2013-08-23T04:46:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-03-09T18:53:36+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>http://matt.weppler.me/2013/03/02/createyourproglang.html</loc>
-  <lastmod>2013-08-23T04:46:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-03-09T18:53:36+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>http://matt.weppler.me/2011/05/20/rhino-javascript-engine.html</loc>
-  <lastmod>2013-08-23T04:46:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-03-09T18:53:36+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://matt.weppler.me/page5/</loc>
+  <lastmod>2014-03-09T18:53:36+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
 </url>
 <url>
   <loc>http://matt.weppler.me/2011/05/17/triangle-numbers-puzzle.html</loc>
-  <lastmod>2013-08-23T04:46:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <lastmod>2014-03-09T18:53:36+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
 </url>
 <url>
   <loc>http://matt.weppler.me/2011/05/16/vidarr-a-silence-alram-for-os-x.html</loc>
-  <lastmod>2013-08-23T04:46:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-03-09T18:53:36+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>http://matt.weppler.me/2011/05/13/what-is-html5.html</loc>
-  <lastmod>2013-08-23T04:46:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-03-09T18:53:36+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>http://matt.weppler.me/2011/04/06/drupal-http-error-0-when-uploading-files.html</loc>
-  <lastmod>2013-08-23T04:46:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-03-09T18:53:36+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>http://matt.weppler.me/2011/01/30/self-extracting-jar-application.html</loc>
-  <lastmod>2013-08-23T04:46:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-03-09T18:53:36+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.41</priority>
 </url>
 </urlset>
