@@ -122,29 +122,29 @@
         return "over a year ago";
       }
     };
-    user = 'mattweppler';
-    $.getJSON('http://api.twitter.com/1/statuses/user_timeline.json?screen_name=' + user + '&include_rts=true&include_entities=true&count=2&callback=?', function(data) {
-      var tweet;
+    //user = 'mattweppler';
+    //$.getJSON('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=' + user + '&include_rts=true&include_entities=true&count=2&callback=?', function(data) {
+      //var tweet;
 
-      tweet = data[0].text;
-      $.each(data, function() {
-        var className;
+      //tweet = data[0].text;
+      //$.each(data, function() {
+        //var className;
 
-        if ($(this)[0].retweeted_status) {
-          className = 'retweet';
-        } else {
-          className = '';
-        }
-        tweet = $(this)[0].text;
-        tweet = tweet.replace(/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig, function(url) {
-          return '<a href="' + url + '">' + url + '</a>';
-        }).replace(/B@([_a-z0-9]+)/ig, function(reply) {
-          return reply.charAt(0) + '<a href="http://twitter.com/' + reply.substring(1) + '">' + reply.substring(1) + '</a>';
-        });
-        return $('#tweets').append('<li class="' + className + '">' + tweet + '<span><a href="http://twitter.com/' + $(this)[0].user.screen_name + '/status/' + $(this)[0].id + '" terget="_blank">' + H($(this)[0].created_at) + '</a></span></li>');
-      });
-      return $('#tweets').fadeIn(300);
-    });
+        //if ($(this)[0].retweeted_status) {
+          //className = 'retweet';
+        //} else {
+          //className = '';
+        //}
+        //tweet = $(this)[0].text;
+        //tweet = tweet.replace(/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig, function(url) {
+          //return '<a href="' + url + '">' + url + '</a>';
+        //}).replace(/B@([_a-z0-9]+)/ig, function(reply) {
+          //return reply.charAt(0) + '<a href="http://twitter.com/' + reply.substring(1) + '">' + reply.substring(1) + '</a>';
+        //});
+        //return $('#tweets').append('<li class="' + className + '">' + tweet + '<span><a href="http://twitter.com/' + $(this)[0].user.screen_name + '/status/' + $(this)[0].id + '" terget="_blank">' + H($(this)[0].created_at) + '</a></span></li>');
+      //});
+      //return $('#tweets').fadeIn(300);
+    //});
     $('.header-notice a.close').click(function() {
       $('.header-notice').slideUp(200);
       return false;
