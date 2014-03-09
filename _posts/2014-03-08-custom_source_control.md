@@ -2236,7 +2236,7 @@ __What do I do next?__
 Some of the things I'd like to address in a future post include:
 
 * Separating the tests from the actual implementation code.
-* DRY'ing out our code. Many times I have had to fight the urge to do it in this post. I really wanted this information to be approachable by anyone though, so I didn't use any gems, or even `rspec` which was created by Jim Weirich.
+* DRY'ing out our code. Many times I have had to fight the urge to do it in this post. I really wanted this information to be approachable by anyone though, so I didn't use any gems, even `minitest/given` which was created by Jim Weirich.
 * Testing for more edge cases, and fixing any bugs we find.
 * Adding code coverage.
 * Adding the ability to handle command line arguments with `OptionParser`.
