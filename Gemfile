@@ -11,5 +11,6 @@ gem 'guard-less'
 #gem 'guard-sass'
 #gem 'guard-uglify'
 gem 'jekyll'
+gem 'kramdown'
 gem 'rb-fsevent'
 gem "therubyracer", "~> 0.12"
