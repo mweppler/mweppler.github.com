@@ -88,13 +88,13 @@ ln -s ~/developer/private/ruby/safari_style_random_password.rb ~/developer/bin/s
 lastly, since I don't want to have to copy from the terminal just to paste it where I need to use it I alias it to:
 
 {% highlight shell-session %}
-alias safari-pass=safari-pass | pbcopy
+alias safari-pass="safari-pass | pbcopy"
 {% endhighlight %}
 
 Now I simply run `safari-pass` and the password is copied to my clipboard. I should I am on a Mac, to do this on linux you can probably just do:
 
 {% highlight shell-session %}
-alias safari-pass=safari-pass | xsel --clipboard --input
+alias safari-pass="safari-pass | xsel --clipboard --input"
 {% endhighlight %}
 
 ...and I only say probably since I have not yet actually tried it myself.
