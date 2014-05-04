@@ -62,7 +62,7 @@ Can you do better?
 
 _Shameless plug warning!_
 
-I have my development environment setup a certain way. Since I work on different *nix machines, I needed a way to replicate it quick and easy. I am actually in the process of creating a ruby cli application. Its pretty bare right now, but I plan on creating a good readme, documentation, and more functionality soon. <a href="https://github.com/mweppler/env-config" target="_blank">Check it out and give me some feedback.</a>
+I have my development environment setup a certain way. Since I work on different *nix machines, I needed a way to replicate it quick and easy. I am actually in the process of creating a ruby cli application. Its pretty bare right now, but I plan on creating a good readme, documentation, and more functionality soon. <a href="https://github.com/mweppler/dev-env" target="_blank">Check it out and give me some feedback.</a>
 
 
 Basically I make the script, which in my case lives in `~/developer/private/ruby` executable.
