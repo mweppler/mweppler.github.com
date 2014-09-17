@@ -11,9 +11,9 @@ title: "Custom Source Control: Code Coverage"
 
 # Custom Source Control: Code Coverage
 
-I originally started writing this post a few months ago. Unfortunitely I got wrapped up in other things and had to put this off. I don't have much to add but wanted to just wrap this up. This is a continuation of my last post on <a href="http://matt.weppler.me/2014/04/28/custom_source_control_refactoring.html" target="_blank">refactoring the custom source control</a> application in ruby. I will be working off the <a href="https://github.com/mweppler/custom-source-control" target="_blank">previous code</a>, so be sure to grab a copy if you don't already have it.
+I originally started writing this post a few months ago. Unfortunately I got wrapped up in other things and had to put this off. I don't have much to add but wanted to just wrap this up. This is a continuation of my last post on <a href="http://matt.weppler.me/2014/04/28/custom_source_control_refactoring.html" target="_blank">refactoring the custom source control</a> application in ruby. I will be working off the <a href="https://github.com/mweppler/custom-source-control" target="_blank">previous code</a>, so be sure to grab a copy if you don't already have it.
 
-A while back, Aaron Patterson <a href="https://twitter.com/tenderlove" target="_blank">@tenderlove</a> wrote a blog post on code coverage and ruby. He wrote a very basic code coverage tool using rubys built in stuff. I can't find that post otherwise I'd link to it. I used what I learned in that post to build something to capture our code coverage in csc.
+A while back, Aaron Patterson <a href="https://twitter.com/tenderlove" target="_blank">@tenderlove</a> wrote a blog post on code coverage and ruby. He wrote a very basic code coverage tool using ruby's built in stuff. I can't find that post otherwise I'd link to it. I used what I learned in that post to build something to capture our code coverage in csc.
 
 In `specs/custom_coverage.rb` add the following:
 
@@ -148,5 +148,5 @@ $ open index.html
 
 <a href="/custom-source-control-code-coverage-report.html" target="_blank" title="Custom Source Control: Code Coverage Report">Custom Source Control: Code Coverage Report</a>
 
-This was a fun experiement for me. It helped me better understand `git`, touched on TDD, and now code coverage. I hope those of you reading found it useful. Feel free to leave me any comments or feedback. You can find the project on <a href="https://github.com/mweppler/custom-source-control" target="_blank">github</a>.
+This was a fun experiment for me. It helped me better understand `git`, touched on TDD, and now code coverage. I hope those of you reading found it useful. Feel free to leave me any comments or feedback. You can find the project on <a href="https://github.com/mweppler/custom-source-control" target="_blank">github</a>.
 
