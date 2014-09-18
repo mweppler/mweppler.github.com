@@ -702,3 +702,5 @@ In my next post I will add the ability to read in a _'key'_ (string of character
 
 Hope this was somewhat helpful, and if you have any comments or feedback please let me know. You can view the <a href="https://github.com/mweppler/simple-xorer" target="_blank">source code</a> hosted on github.
 
+See <a href="http://matt.weppler.me/2014/09/18/simple-xorer-part-2.html" target="_blank">part 2</a> of our simple xorer.
+
