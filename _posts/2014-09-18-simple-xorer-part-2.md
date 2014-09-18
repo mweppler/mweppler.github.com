@@ -496,17 +496,20 @@ irb> "This is a test...\n".unpack('C*').map {|e| e.to_s 2}
 => ["1010100", "1101000", "1101001", "1110011", "100000", "1101001", "1110011", "100000", "1100001", "100000", "1110100", "1100101", "1110011", "1110100", "101110", "101110", "101110", "1010"]
 {% endhighlight %}
 
-<a href="http://github.com" target="_blank">github</a>
-Check the ruby documentation and if you feel like experimenting a little further, you can refactor some of the methods we've created to use `pack` and `unpack` instead of our implementation. Also take a look at benchmarking in ruby and benchmark any changes you make.
+Check the ruby documentation and if you feel like experimenting a little further, you can refactor some of the methods we've created to use <a href="http://www.ruby-doc.org/core-1.9.3/Array.html#method-i-pack" target="_blank">`pack`</a> and  <a href="http://www.ruby-doc.org/core-1.9.3/String.html#method-i-unpack" target="_blank">`unpack`</a> instead of our implementation. Also take a look at benchmarking in ruby and benchmark any changes you make.
 
-
-<a href="http://github.com" target="_blank">github</a>
-Ruby benchmark example...
+Ruby provides methods to <a href="http://www.ruby-doc.org/stdlib-1.9.3/libdoc/benchmark/rdoc/Benchmark.html" target="_blank">benchmark</a> and report the time used to execute Ruby code.
 
 {% highlight ruby %}
-...
-{% endhighlight %}
+require 'benchmark'
 
+n = 50000
+Benchmark.bm(7) do |x|
+  x.report("for:")   { for i in 1..n; a = "1"; end }
+  x.report("times:") { n.times do   ; a = "1"; end }
+  x.report("upto:")  { 1.upto(n) do ; a = "1"; end }
+end
+{% endhighlight %}
 
 Hope this was somewhat helpful, and if you have any comments or feedback please let me know. You can view the <a href="https://github.com/mweppler/simple-xorer" target="_blank">source code</a> hosted on github.
 
