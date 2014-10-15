@@ -26,7 +26,11 @@
     // todo: prevent paddle from going outside east/west boundary
     // todo: add more buffer to ball/paddle
 
-    var colors = {
+    var ball,
+    brickCarrier,
+    paddle,
+
+    colors = {
       'black':       '#000000',
       'brown':       '#a52a2a',
       'deeppink':    '#eb0093',
@@ -75,21 +79,21 @@
       'updateInterval': 10
     },
 
-    ball = {
+    _ball = {
       'direction':    5,
       'setDirection': function(direction) {
         this.shape.xDirection = direction;
       },
       'setShape':     function() {
-        ball.shape             = Object.create(shape);
-        ball.shape.fill        = colors.white;
-        ball.shape.name        = 'ball';
-        ball.shape.radius      = 0;
-        ball.shape.type        = 'arc';
-        ball.shape.xCoordinate = 0;
-        ball.shape.yCoordinate = 0;
-        ball.shape.xDirection  = this.direction;
-        ball.shape.yDirection  = this.speed;
+        this.shape             = Object.create(shape);
+        this.shape.fill        = colors.white;
+        this.shape.name        = 'ball';
+        this.shape.radius      = 0;
+        this.shape.type        = 'arc';
+        this.shape.xCoordinate = 0;
+        this.shape.yCoordinate = 0;
+        this.shape.xDirection  = this.direction;
+        this.shape.yDirection  = this.speed;
       },
       'setSpeed':     function(speed) {
         this.shape.yDirection = speed;
@@ -97,7 +101,7 @@
       'speed':        -5
     },
 
-    brickCarrier = {
+    _brickCarrier = {
       'columns':         0,
       'height':          0,
       'bricks':          undefined,
@@ -126,22 +130,22 @@
       }
     },
 
-    paddle = {
+    _paddle = {
       'cpuControlled':   false,
       'deflectionAngle': 10,
       'isMovingLeft':    false,
       'isMovingRight':   false,
       'keyboardSpeed':   4,
       'setShape':        function() {
-        paddle.shape             = Object.create(shape);
-        paddle.shape.fill        = colors.white;
-        paddle.shape.name        = 'paddle';
-        paddle.shape.height      = 0;
-        paddle.shape.stroke      = colors.olivedrab;
-        paddle.shape.type        = 'rect';
-        paddle.shape.width       = 0;
-        paddle.shape.xCoordinate = 0;
-        paddle.shape.yCoordinate = 0;
+        this.shape             = Object.create(shape);
+        this.shape.fill        = colors.white;
+        this.shape.name        = 'paddle';
+        this.shape.height      = 0;
+        this.shape.stroke      = colors.olivedrab;
+        this.shape.type        = 'rect';
+        this.shape.width       = 0;
+        this.shape.xCoordinate = 0;
+        this.shape.yCoordinate = 0;
       }
     },
 
@@ -172,6 +176,7 @@
     },
 
     initializeBall = function() {
+      ball = Object.create(_ball);
       ball.setShape();
       ball.shape.radius      = canvas.shape.width * 0.0250;
       ball.shape.xCoordinate = ball.shape.radius;
@@ -180,6 +185,7 @@
     },
 
     initializeBricks = function() {
+      brickCarrier = Object.create(_brickCarrier);
       brickCarrier.columns = 5;
       brickCarrier.height  = canvas.shape.height * 0.05;
       brickCarrier.padding = 0.75;
@@ -202,6 +208,7 @@
     },
 
     initializePaddle = function() {
+      paddle = Object.create(_paddle);
       paddle.setShape();
       paddle.shape.height = canvas.shape.height * 0.040;
       paddle.shape.width = canvas.shape.width * 0.2;
@@ -490,6 +497,7 @@
     resetGame = function() {
       clearInterval(game.loop);
       clearInterval(game.updateBallSpeed);
+      cheats.clear();
       game.timeStart = undefined;
       setTimeout(function() {
         game.active = false;
@@ -509,9 +517,22 @@
             paddle.cpuControlled = true;
           },
           '_keycode': [67, 80, 85],
+        },
+        'win': {
+          '_function': function() {
+            for (var row = 0; row < brickCarrier.rows; row++) {
+              for (var column = 0; column < brickCarrier.columns; column++) {
+                brickCarrier.bricks[row][column].active = 0;
+              }
+            }
+          },
+          '_keycode': [87, 73, 78],
         }
       },
       check: function(keycode) {
+        if (this.register.length > 10) {
+          this.clear();
+        }
         this.register.push(keycode);
         for (var code in this.codes) {
           var arraysAreEqual = true;
