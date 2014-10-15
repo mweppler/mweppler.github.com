@@ -127,6 +127,7 @@
     },
 
     paddle = {
+      'cpuControlled':   false,
       'deflectionAngle': 10,
       'isMovingLeft':    false,
       'isMovingRight':   false,
@@ -307,11 +308,13 @@
     },
 
     drawPaddle = function() {
-      //cpuControlPaddle();
       if (paddle.isMovingRight) {
         paddle.shape.xCoordinate += paddle.keyboardSpeed;
       } else if (paddle.isMovingLeft) {
         paddle.shape.xCoordinate -= paddle.keyboardSpeed;
+      }
+      if (paddle.cpuControlled) {
+        cpuControlPaddle();
       }
       drawShape(paddle.shape);
     },
@@ -497,6 +500,38 @@
       }, 5000);
     },
 
+    // cheat codes
+    cheats = {
+      'register': [],
+      'codes': {
+        'cpu': {
+          '_function': function() {
+            paddle.cpuControlled = true;
+          },
+          '_keycode': [67, 80, 85],
+        }
+      },
+      check: function(keycode) {
+        this.register.push(keycode);
+        for (var code in this.codes) {
+          var arraysAreEqual = true;
+          for (var i = 0; i < this.codes[code]._keycode.length; ++i) {
+            if (this.codes[code]._keycode[i] !== this.register[i]) {
+              arraysAreEqual = false;
+              break;
+            }
+          }
+          if (arraysAreEqual) {
+            this.codes[code]._function();
+            this.clear();
+          }
+        }
+      },
+      clear: function() {
+        this.register = [];
+      }
+    },
+
     // Keyboard Events
     onKeyDown = function(event) {
       if (event.keyCode === 39) {
@@ -585,18 +620,21 @@
 
     document.body.onkeyup = function(event) {
       // pause/unpause the game
-      if (event.keyCode === 80) {
+      if (event.keyCode === 32) {
         if (game.timeStart !== undefined) {
           pauseGameLoop();
         }
       }
-
       // start the game
-      if (event.keyCode === 13) {
+      else if (event.keyCode === 13) {
         if (game.timeStart === undefined) {
           startGameLoop();
         }
-      } else {
+      }
+      // check for cheat or directional key press
+      else {
+        cheats.check(event.keyCode);
+        //[37, 38, 39, 40];
         onKeyUp(event);
       }
     };
