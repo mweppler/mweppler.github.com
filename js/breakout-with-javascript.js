@@ -186,7 +186,7 @@
 
     initializeBricks = function() {
       brickCarrier = Object.create(_brickCarrier);
-      brickCarrier.columns = 5;
+      brickCarrier.columns = 8;
       brickCarrier.height  = canvas.shape.height * 0.05;
       brickCarrier.padding = 0.75;
       brickCarrier.rows    = 5;
