@@ -117,7 +117,7 @@ set :raise_errors, true
 run Sinatra::Application
 {% endhighlight %}
 
-I am going to create a config file to store things like the media location, and supported file types:
+I am going to add code to the config.yml file to store things like the media location, and supported file types:
 
 {% highlight ruby %}
 file_properties:
@@ -185,7 +185,7 @@ $config['file_properties']['video']['link_path']
 
 Note: this is just a preference of mine.
 
-The database and DataMapper. Now lets add the sqlite database:
+Continuing in the video_store.rb file, we add the database and DataMapper. Now lets add the sqlite database:
 
 {% highlight ruby %}
 configure do
@@ -211,7 +211,7 @@ class Video
 end
 {% endhighlight %}
 
-That was easy! Our attachment class will have a bit more logic in it since it will handle the file uploads:
+That was easy! Our attachment class (which will also go in video_store.rb) will have a bit more logic in it since it will handle the file uploads:
 
 {% highlight ruby %}
 class Attachment
@@ -263,7 +263,7 @@ before do
 end
 {% endhighlight %}
 
-Up to this point, we've been adding a bunch of "backend" code. Now we are going to start write code that we can actually see in the web browser. So we'll create our initial route:
+Up to this point, we've been adding a bunch of "backend" code. Now we are going to start write code that we can actually see in the web browser. This is an initial route, which can be added to the video_store.rb file:
 
 {% highlight ruby %}
 get '/' do
@@ -278,7 +278,7 @@ This tells sinatra that if the user visits our site http://localhost:9393/ we wa
 %h1 Welcome to the Video Store
 {% endhighlight %}
 
-I want to finish off this first sprint by building out our layout:
+I want to finish off this first sprint by building out our layout (in the layout.haml file):
 
 {% highlight ruby %}
 !!! 5
