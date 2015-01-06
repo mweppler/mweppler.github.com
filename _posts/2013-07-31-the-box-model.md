@@ -608,7 +608,6 @@ _(Bacon Element)_
 ![Bacon Element Styled](/img/for-posts/the-box-model/bacon-element-styled.png "Bacon Element Styled")  
 _(Bacon Element Styled)_  
 
-<!--
 ### CSS
 {% highlight css %}
 div { background-color: pink; padding: 5px; }
@@ -618,7 +617,6 @@ img { float: left; margin-right: 10px; }
 h1 { float: left; margin: 0; }
 p { float: left; margin-top: 0; width: 350px; }
 {% endhighlight %}
--->
 
 ---
 
