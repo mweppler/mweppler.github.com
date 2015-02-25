@@ -13,4 +13,4 @@ gem 'guard-less'
 gem 'jekyll'
 gem 'kramdown'
 gem 'rb-fsevent'
-gem "therubyracer", "~> 0.12"
+#gem 'therubyracer', platforms: :ruby
