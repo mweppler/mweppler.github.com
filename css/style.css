@@ -1,6 +1,6 @@
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
 /* #Import the other CSS-files.
 ================================================== */
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
 .clearfix {
   *zoom: 1;
 }
@@ -366,7 +366,7 @@ td {
   img {
     max-width: 100% !important;
   }
-  @page  {
+  @page {
     margin: 0.5cm;
   }
   p,
@@ -849,13 +849,10 @@ td {
   filter: alpha(opacity=8);
   -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */
-
   -moz-box-sizing: border-box;
   /* Firefox, other Gecko */
-
   box-sizing: border-box;
   /* Opera/IE 8+ */
-
 }
 .nivo-caption p {
   padding: 5px;
@@ -1212,7 +1209,6 @@ Supports Thumbs: true
 #fancybox-right:hover {
   visibility: visible;
   /* IE6 */
-
 }
 #fancybox-left:hover span {
   left: 20px;
@@ -1386,14 +1382,13 @@ a [class*=" icon-"] {
 /* makes the font 33% larger relative to the icon container */
 .icon-large:before {
   vertical-align: middle;
-  font-size: 1.3333333333333333em;
+  font-size: 1.33333333em;
 }
 .btn [class^="icon-"],
 .nav-tabs [class^="icon-"],
 .btn [class*=" icon-"],
 .nav-tabs [class*=" icon-"] {
   /* keeps button heights with and without icons the same */
-
   line-height: .9em;
 }
 li [class^="icon-"],
@@ -1405,7 +1400,6 @@ li [class*=" icon-"] {
 li .icon-large:before,
 li .icon-large:before {
   /* 1.5 increased font size for icon-large * 1.25 width */
-
   width: 1.875em;
 }
 ul.icons {
@@ -1420,7 +1414,6 @@ ul.icons li [class*=" icon-"] {
 ul.icons li .icon-large:before,
 ul.icons li .icon-large:before {
   /* 1.5 increased font size for icon-large * 1.25 width */
-
   vertical-align: initial;
 }
 /*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
@@ -2289,6 +2282,10 @@ dd.clear {
   color: #428bca;
   text-decoration: none;
 }
+/* Customizations */
+.section-bottom-border {
+  border-bottom: 1px dotted #bdd9ff;
+}
 /* #Colors
 ================================================== */
 /* #Load font
@@ -2299,7 +2296,6 @@ body {
   border-top: 3px solid #2481ff;
   background: url('../img/bg.jpg') repeat;
   /*font-size: 13px;*/
-
   font-size: 100%;
   font-family: 'Helvetica Neue', Helvetica, Arial;
   font-weight: 300;
@@ -3534,7 +3530,6 @@ a img.aligncenter {
   border: 1px solid #f0f0f0;
   max-width: 96%;
   /* Image does not overflow the content area */
-
   padding: 5px 3px 10px;
   text-align: center;
 }
@@ -3566,7 +3561,6 @@ a img.aligncenter {
 .isotope,
 .isotope .isotope-item {
   /* change duration value to whatever you like */
-
   -webkit-transition-duration: 0.8s;
   -moz-transition-duration: 0.8s;
   -ms-transition-duration: 0.8s;
@@ -3699,7 +3693,6 @@ h1.entry-title {
     margin-left: 20px;
   }
   .comments ol li ol li {
-    display: block;
     float: left;
     display: block;
   }
