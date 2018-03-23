@@ -3,14 +3,15 @@ exclude:  [Gemfile, Gemfile.lock, Guardfile, Rakefile, README.md]
 lsi:      false
 markdown: kramdown
 paginate: 5
+plugins: [jekyll-gist, jekyll-paginate]
 #permalink: pretty
-pygments: true
+highlighter: true
 source:   .
 
 # site specific
 base-url: "http://matt.weppler.me/"
 
-copyright: "Copyright 2014 Matt Weppler | All Rights Reserved."
+copyright: "Copyright 2018 Matt Weppler | All Rights Reserved."
 
 contact-info:
   email: matt@weppler.me
@@ -37,20 +38,10 @@ navigation-footer:
     href:  "https://github.com/mweppler"
     link:  github
     local: false
-  - class: icon-google-plus-sign
-    extra: rel="author"
-    href:  "https://plus.google.com/108656258437565935806?rel=author"
-    link:  Google+
-    local: false
   - class: icon-linkedin-sign
     extra:
     href:  "https://www.linkedin.com/in/mweppler"
     link:  LinkedIn
-    local: false
-  - class: icon-pinterest-sign
-    extra:
-    href:  "https://pinterest.com/mattweppler"
-    link:  Pinterest
     local: false
   - class: icon-twitter-sign
     extra:
