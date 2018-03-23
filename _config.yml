@@ -5,7 +5,7 @@ markdown: kramdown
 paginate: 5
 plugins: [jekyll-gist, jekyll-paginate]
 #permalink: pretty
-highlighter: true
+highlighter: rouge
 source:   .
 
 # site specific
