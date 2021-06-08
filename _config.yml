@@ -11,7 +11,7 @@ source:   .
 # site specific
 base-url: "http://matt.weppler.me/"
 
-copyright: "Copyright 2018 Matt Weppler | All Rights Reserved."
+copyright: "Copyright 2021 Matt Weppler | All Rights Reserved."
 
 contact-info:
   email: matt@weppler.me
@@ -28,11 +28,6 @@ navigation-header:
     local: true
 
 navigation-footer:
-  - class: icon-facebook-sign
-    extra:
-    href:  "https://www.facebook.com/mattweppler"
-    link:  Facebook
-    local: false
   - class: icon-github-sign
     extra:
     href:  "https://github.com/mweppler"
@@ -47,6 +42,11 @@ navigation-footer:
     extra:
     href:  "https://twitter.com/mattweppler"
     link:  Twitter
+    local: false
+  - class: icon-facebook-sign
+    extra:
+    href:  "https://www.facebook.com/matt.weppler.5"
+    link:  Facebook
     local: false
 
 javascripts:
