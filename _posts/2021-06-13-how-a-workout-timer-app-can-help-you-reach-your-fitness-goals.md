@@ -39,5 +39,5 @@ With all of the available distractions in today's world, it can be hard to find 
 
 <a href="https://apps.apple.com/us/app/lasttimer/id1571153200" target="_blank">LastTimer</a> is an iOS-only workout timer app with customizable settings that let you know how much time has elapsed and what percentage of the remaining time remains. So the only thing left to worry about now is getting your sweat on!
 
-<a href="/img/for-posts/how-a-workout-timer-app-can-help-you-reach-your-fitness-goals.jpg" class="lightbox"><img alt="Finished workout" src="/img/for-posts/how-a-workout-timer-app-can-help-you-reach-your-fitness-goals.jpg" style="float: left; margin: 5px; width: 100%;" /></a>
+<a href="/img/for-posts/how-a-workout-timer-app-can-help-you-reach-your-fitness-goals.JPG" class="lightbox"><img alt="Finished workout" src="/img/for-posts/how-a-workout-timer-app-can-help-you-reach-your-fitness-goals.JPG" style="float: left; margin: 5px; width: 100%;" /></a>
 
