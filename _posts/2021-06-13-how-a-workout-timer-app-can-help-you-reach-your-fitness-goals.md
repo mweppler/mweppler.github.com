@@ -3,11 +3,21 @@ layout: post
 meta-description: If you're looking for an easy way to track your workouts, look no further. This post will give you the benefits of using a workout timer app.
 meta-keywords: exercise, fitness, ios app, tabata timer, watchos app, workout
 preview: |
-  That old excuse of "I don't have time to work out" is becoming less and less valid. We are all busy people, but we still manage to find something in our day for ourselves. With a few minutes here and there, you can get a workout in!
+  That old excuse of "I don't have time to work out" is becoming less and less valid. We are all busy people, but we still manage to find something in our day for ourselves. With
 syntax-highlighting: true
 tags: [exercise, fitness, ios app, tabata timer, watchos app, workout]
 title: "How a Workout Timer App Can Help You Reach Your Fitness Goals"
+social-media:
+  facebook:
+    author: "lasttimerapp"
+    publisher: "matt.weppler.5"
+    og-image: "workout-timer-reach-fitness-goals/workout-timer-reach-fitness-goals-og-img.jpg"
+  twitter:
+    author: "@lasttimerapp"
+    publisher: "@mattweppler"
 ---
+
+{% include _share-this.html %}
 
 # How a Workout Timer App Can Help You Reach Your Fitness Goals
 
@@ -39,5 +49,5 @@ With all of the available distractions in today's world, it can be hard to find 
 
 <a href="https://apps.apple.com/us/app/lasttimer/id1571153200" target="_blank">LastTimer</a> is an iOS-only workout timer app with customizable settings that let you know how much time has elapsed and what percentage of the remaining time remains. So the only thing left to worry about now is getting your sweat on!
 
-<a href="/img/for-posts/how-a-workout-timer-app-can-help-you-reach-your-fitness-goals.JPG" class="lightbox"><img alt="Finished workout" src="/img/for-posts/how-a-workout-timer-app-can-help-you-reach-your-fitness-goals.JPG" style="float: left; margin: 5px; width: 100%;" /></a>
+<a href="/img/for-posts/workout-timer-reach-fitness-goals/workout-timer-reach-fitness-goals.jpg" class="lightbox"><img alt="Finished workout" src="/img/for-posts/workout-timer-reach-fitness-goals/workout-timer-reach-fitness-goals.jpg" style="float: left; margin: 5px; width: 100%;" /></a>
 

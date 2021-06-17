@@ -3,18 +3,19 @@ exclude:  [Gemfile, Gemfile.lock, Guardfile, Rakefile, README.md]
 lsi:      false
 markdown: kramdown
 paginate: 5
-plugins: [jekyll-gist, jekyll-paginate]
+plugins: [jekyll-gist, jekyll-paginate, jekyll-sitemap]
 #permalink: pretty
 highlighter: rouge
 source:   .
 
 # site specific
-base-url: "http://matt.weppler.me/"
 
 copyright: "Copyright 2021 Matt Weppler | All Rights Reserved."
 
 contact-info:
   email: matt@weppler.me
+
+url: "https://matt.weppler.me"
 
 navigation-header:
   - href:  /index.html

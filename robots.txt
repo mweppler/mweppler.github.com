@@ -1,10 +1,10 @@
 # This is the sitemap for Matt Weppler
 #
-# Updated 01 June 2013
+# Updated 13 June 2021
 #
-# Visit http://matt.weppler.me/
+# Visit https://matt.weppler.me/
 
 User-agent: *
 Disallow:
 
-Sitemap: http://matt.weppler.me/sitemap.xml
+Sitemap: https://matt.weppler.me/sitemap.xml
