@@ -394,3 +394,5 @@ A maximized training effect means you'll get improved results.
 
 What's better than that?
 
+<a href="https://apps.apple.com/us/app/lasttimer/id1571153200" target="_blank">LastTimer</a> is an iOS-only workout timer app with customizable settings that let you know how much time has elapsed and what percentage of the remaining time remains. So the only thing left to worry about now is getting your sweat on!
+
