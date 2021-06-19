@@ -10,7 +10,7 @@ browser-vendors:
   - vendor: Apple
     name: Safari
     browser-icons:
-      16x16: "/img/browser-logos/safari/safari_16x16.png"
+      sixteen-by-sixteen: "/img/browser-logos/safari/safari_16x16.png"
     flags-settings: ""
     prefix: -webkit
     links:
@@ -27,7 +27,7 @@ browser-vendors:
   - vendor: Google
     name: Chrome
     browser-icons:
-      16x16: "/img/browser-logos/chrome/chrome_16x16.png"
+      sixteen-by-sixteen: "/img/browser-logos/chrome/chrome_16x16.png"
     flags-settings: "chrome://flags"
     prefix: -webkit
     links:
@@ -48,7 +48,7 @@ browser-vendors:
   - vendor: Microsoft
     name: Internet Explorer
     browser-icons:
-      16x16: "/img/browser-logos/ie9-10/ie9-10_16x16.png"
+      sixteen-by-sixteen: "/img/browser-logos/ie9-10/ie9-10_16x16.png"
     flags-settings: ""
     prefix: -ms
     links:
@@ -69,7 +69,7 @@ browser-vendors:
   - vendor: Mozilla
     name: Firefox
     browser-icons:
-      16x16: "/img/browser-logos/firefox/firefox_16x16.png"
+      sixteen-by-sixteen: "/img/browser-logos/firefox/firefox_16x16.png"
     flags-settings: "about:config"
     prefix: -moz
     links:
@@ -88,7 +88,7 @@ browser-vendors:
   - vendor: Opera
     name: Opera
     browser-icons:
-      16x16: "/img/browser-logos/opera/opera_16x16.png"
+      sixteen-by-sixteen: "/img/browser-logos/opera/opera_16x16.png"
     flags-settings: ""
     prefix: -o
     links:
@@ -429,7 +429,7 @@ small-market-browsers:
     {% for browser in page.browser-vendors %}
       <tr>
         <td>{{ browser.vendor }}</td>
-        <td>{{ browser.name }} <img alt="Browser Icon" src="{{ browser.browser-icons.16x16 }}" title="Browser Icon" /></td>
+        <td>{{ browser.name }} <img alt="Browser Icon" src="{{ browser.browser-icons.sixteen-by-sixteen }}" title="Browser Icon" /></td>
         <td><a href="{{ browser.flags-settings }}" target="_blank">{{ browser.flags-settings }}</a></td>
         <td>{{ browser.prefix }}</td>
         <td>

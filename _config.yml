@@ -21,6 +21,9 @@ navigation-header:
   - href:  /index.html
     link:  Home
     local: true
+  - href:  /last-timer.html
+    link:  LastTimer App
+    local: true
   - href:  /projects.html
     link:  Projects
     local: true
