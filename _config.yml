@@ -10,7 +10,7 @@ source:   .
 
 # site specific
 
-copyright: "Copyright 2021 Matt Weppler | All Rights Reserved."
+copyright: "Copyright 2023 Matt Weppler | All Rights Reserved."
 
 contact-info:
   email: matt@weppler.me
@@ -32,6 +32,16 @@ navigation-header:
     local: true
 
 navigation-footer:
+  - class: icon-facebook-sign
+    extra:
+    href:  "https://www.facebook.com/matt.weppler.5"
+    link:  Facebook
+    local: false
+  - class: "fa fa-instagram fa-inverse"
+    extra:
+    href:  "https://www.instagram.com/mweppler/"
+    link:  Instagram
+    local: false
   - class: icon-github-sign
     extra:
     href:  "https://github.com/mweppler"
@@ -46,11 +56,6 @@ navigation-footer:
     extra:
     href:  "https://twitter.com/mattweppler"
     link:  Twitter
-    local: false
-  - class: icon-facebook-sign
-    extra:
-    href:  "https://www.facebook.com/matt.weppler.5"
-    link:  Facebook
     local: false
 
 javascripts:
@@ -94,3 +99,6 @@ stylesheets:
   - name: style
     stylesheet: |
       <link rel="stylesheet" href="/css/style.css">
+  - name: forkawesome
+    stylesheet: |
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
